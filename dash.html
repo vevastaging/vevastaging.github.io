@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Analyst Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<style>
+
+.bg-dark {
+  padding: 20px;
+  background-color: #646566;
+}
+
+.bg-dark .topText {
+  color:#ffffff;
+
+}
+
+.bg-light {
+  padding: 20px;
+
+}
+
+.bg-light .topText {
+  color:#000000;
+}
+
+
+.smallSearch {
+  width: 100px !important;
+}
+
+.footer {
+  background-color: #dedee0;
+  padding-top: 10px;
+}
+
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar {
+
+    background: #383838;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #A9A9A9;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #A9A9A9;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #A9A9A9;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #A9A9A9;
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #A9A9A9;
+}
+
+.placeholder {
+  border-style: double;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 5px;
+}
+
+.dashFlex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+</style>
+
+  </head>
+
+
+  <body>
+
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">VEVA</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="./index.html">Home</a></li>
+            <li class="active"><a href="#">Tokens<span class="sr-only">(current)</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Protocol</a></li>
+                <li><a href="#">Whitepaper</a></li>
+                <li><a href="#">Team</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Events</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Press</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Help</a></li>
+            <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+<div class = "bg-light">
+
+
+
+       <div class="wrapper">
+
+               <nav id="sidebar">
+                   <!-- Sidebar Header -->
+                   <div class="sidebar-header">
+                       <h3>VEVA</h3>
+                   </div>
+
+                   <!-- Sidebar Links -->
+                   <ul class="list-unstyled components">
+                       <li class="active"><a href="#">Dash Home</a></li>
+                       <li><a href="#">Account</a></li>
+                       <li><!-- Link with dropdown items -->
+                           <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Apply</a>
+                           <ul class="collapse list-unstyled" id="homeSubmenu">
+                               <li><a href="#">Jury</a></li>
+                               <li><a href="#">Analyst</a></li>
+                           </ul>
+                       <li><a href="#">Valuation</a></li>
+                       <li><a href="#">Referrals</a></li>
+                   </ul>
+               </nav>
+
+               <div id="content">
+
+                   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                     <h1 class="page-header">Dashboard</h1>
+
+                     <div class="row placeholders dashFlex">
+                       <div class="col-xs-6 col-sm-3 placeholder">
+                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                         <h4>Week 1: Jan. 01</h4>
+                         <span class="text-muted">Survey Due Jan. 06</span>
+                         <br><span>Serve As:</span>
+                         <form action="">
+                        <input type="checkbox"> Analyst &nbsp; &nbsp;
+                        <input type="checkbox"> Jury
+                        </form>
+                       </div>
+                       <div class="col-xs-6 col-sm-3 placeholder">
+                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                         <h4>Week 2: Jan. 08</h4>
+                         <span class="text-muted">Survey Due Jan. 13</span>
+                         <br><span>Serve As:</span>
+                         <form action="">
+                        <input type="checkbox"> Analyst &nbsp; &nbsp;
+                        <input type="checkbox"> Jury
+                        </form>
+                       </div>
+                       <div class="col-xs-6 col-sm-3 placeholder">
+                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                         <h4>Week 3: Jan. 15</h4>
+                         <span class="text-muted">Survey Due Jan. 20</span>
+                         <br><span>Serve As:</span>
+                         <form action="">
+                        <input type="checkbox"> Analyst &nbsp; &nbsp;
+                        <input type="checkbox"> Jury
+                        </form>
+                       </div>
+
+                     </div>
+
+                     <h2 class="sub-header">Recent Coverages</h2>
+                     <div class="table-responsive">
+                       <table class="table table-striped">
+                         <thead>
+                           <tr>
+                             <th>Date</th>
+                             <th>Role</th>
+                             <th>Token</th>
+                             <th>Symbol</th>
+                             <th>Outcome</th>
+                             <th>Payout</th>
+                             <th>Briefs</th>
+                             <th>Details</th>
+                           </tr>
+
+                           <tr>
+                             <td>03/01/18</td>
+                             <td>Jury</td>
+                             <td>Civic</td>
+                             <td>CVC</td>
+                             <td>BEAR Sway (-3.1)</td>
+                             <td>1,000 VEVA</td>
+                             <td><a href link="#"> [link] </a> </td>
+                             <td>More</td>
+                           </tr>
+
+                           <tr>
+                             <td>02/27/18</td>
+                             <td>BULL Analyst</td>
+                             <td>Ethereum</td>
+                             <td>ETH</td>
+                             <td>NO Sway (-0.6)</td>
+                             <td>11,000 VEVA</td>
+                             <td><a href link="#"> [link] </a> </td>
+                             <td>More</td>
+                           </tr>
+
+                           <tr>
+                             <td>02/19/18</td>
+                             <td>BEAR Analyst</td>
+                             <td>Neo</td>
+                             <td>NEO</td>
+                             <td>BULL Sway (+2.6)</td>
+                             <td>6,000 VEVA</td>
+                             <td><a href link="#"> [link] </a> </td>
+                             <td>More</td>
+                           </tr>
+
+                           <tr>
+                             <td>3/01/18</td>
+                             <td>Jury</td>
+                             <td>Iconomi</td>
+                             <td>ICN</td>
+                             <td>NO Sway (-1.8)</td>
+                             <td>0 VEVA</td>
+                             <td><a href link="#"> [link] </a> </td>
+                             <td>More</td>
+                           </tr>
+                           <tr>
+                             <td>3/01/18</td>
+                             <td>BEAR Analyst</td>
+                             <td>Ripple</td>
+                             <td>XRP</td>
+                             <td>BEAR Sway (-2.2)</td>
+                             <td>11,000 VEVA</td>
+                             <td><a href link="#"> [link] </a> </td>
+                             <td>More</td>
+                           </tr>
+                         </tbody>
+                       </table>
+                     </div>
+                   </div>
+
+
+               <div>
+
+       </div>
+
+   </div>
+ </div>
+
+
+
+
+
+<div class="footer">
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-8">
+				<a href="#">Terms of Service</a>
+        |
+				<a href="#">Privacy</a>
+        |
+				<a href="#">Security</a>
+			</div>
+			<div class="span4">
+				<p class="muted pull-right">© 2017 Veva. All rights reserved</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
