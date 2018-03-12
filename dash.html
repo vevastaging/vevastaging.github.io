@@ -182,6 +182,17 @@ justify-content: space-around;
   justify-content:flex-end;
 }
 
+.dashFlex {
+  display:flex;
+  flex-direction: column;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
 
 </style>
 
@@ -265,8 +276,9 @@ justify-content: space-around;
                      <h1 class="page-header">Dashboard</h1>
 
                      <div class="row placeholders dashFlex">
-                       <div class="col-xs-6 col-sm-3 placeholder">
-                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+
+                       <div class="placeholder">
+
                          <h4>Week 1: Jan. 01</h4>
                          <span class="text-muted">Survey Due Jan. 06</span>
                          <br><span>Serve As:</span>
@@ -275,8 +287,8 @@ justify-content: space-around;
                         <input type="checkbox"> Jury
                         </form>
                        </div>
-                       <div class="col-xs-6 col-sm-3 placeholder">
-                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+
+                       <div class="placeholder">
                          <h4>Week 2: Jan. 08</h4>
                          <span class="text-muted">Survey Due Jan. 13</span>
                          <br><span>Serve As:</span>
@@ -285,8 +297,8 @@ justify-content: space-around;
                         <input type="checkbox"> Jury
                         </form>
                        </div>
-                       <div class="col-xs-6 col-sm-3 placeholder">
-                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+
+                       <div class="placeholder">
                          <h4>Week 3: Jan. 15</h4>
                          <span class="text-muted">Survey Due Jan. 20</span>
                          <br><span>Serve As:</span>
