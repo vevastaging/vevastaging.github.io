@@ -7,7 +7,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Veva</title>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -18,130 +23,384 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <style>
-body, html {
-    height: 100%;
-    margin: 0;
-}
-.bg {
-    /* The image used */
-    background-color: white;
-    /* Full height */
-    height: 100%;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.bodyDiv {
-display:flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
-}
-.backLogo {
-  max-width:33%;
-}
-.buttonRow {
-  width: 40%;
+
+
+.header {
   display:flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 15px;
 }
+
+.headerLogo {
+  max-width: 100px;
+}
+
 .signup {
 padding: 20px;
 display:flex;
-justify-content: flex-end;
+align-items: flex-end;
 }
-.button-space {
-  margin-left: 25px;
-}
-.buttonPad {
-  margin-top: 30px;
-}
+
 .signText {
   margin-left: 25px;
   font-size: 18px;
   font-style: italic;
   color: #fd6731;
 }
-.lndBtn {
-  border-style: solid;
-  border-width: 2px;
-  border-color: #fd6731;
-  color: #fd6731;
-  padding: 5px;
-  font-size: 25px;
-  min-width: 200px;
-  text-align:center;
-  border-radius:25px;
+.bg-dark {
+  padding: 20px;
+  background-color: #646566;
+    background-color: #383838;
 }
-.lndBtn:hover {
-  color: white;
-  background-color: #fd6731;
+
+.bg-dark .topText {
+  color:#ffffff;
+
 }
+
+.bg-light {
+  padding: 20px;
+
+}
+
+.bg-light .topText {
+  color:#000000;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.headText {
+  font-size: 60px;
+  line-height: .6;
+}
+
+
+.hr-span {
+  margin:0;
+  padding:0;
+}
+
+.tokenDisc {
+  font-size: 15px;
+}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('./resources/site/search.png');
+    background-size: 25px 25px;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+.th {
+    text-align: left;
+}
+
+.smallSearch {
+  width: 100px !important;
+}
+
+
+
+.footer {
+  background-color: #dedee0;
+  padding-top: 10px;
+}
+
+
 </style>
-
-<!-- style notes:  aqua: #31EDFD  -->
-
 
   </head>
 
 
-  <body class="bg">
+  <body>
 
-<div class="signup">
 
-<a href link="#" class = "signText"> <u> SIGN IN </u></a>
-<a href link="#" class = "signText"> <u> REGISTER </u> </a>
+<div class = "bg-light">
+
+<div class= "header">
+
+<img class="headerLogo" src="./resources/site/bg_white.jpeg">
+
+
+<span><h1>veva.one  |  decentralized token ratings</h1> </span>
+
+  <div class="signup">
+
+  <a href link="#" class = "signText"> <u> SIGN IN </u></a>
+  <a href link="#" class = "signText"> <u> REGISTER </u> </a>
 
 </div>
-
-<div class="bodyDiv">
-
-    <img src = "./resources/site/bg_white.jpeg" class="backLogo" >
-
-<br>
-
-    <p class = "buttonRow buttonPad">
+  </div>
 
 
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Token Ratings</div>
+  <div class="panel-body">
+    <p>
 
-        <a href="./ratings.html" class="lndBtn">Ratings</a>
-
-        <a href="./dash.html" class="lndBtn">Dashboard</a>
-
+      <h3><b><i>Welcome to the first conflict-proof ratings platform.</b></i></h3>
+      <span class= "tokenDisc">Our token ratings are determined by a decentralized collection of experts. Every VEVA score is the result of game theory, economics, and our human neural network.</span>
+      <br>
     </p>
 
+    <form>
+<input type="text" name="search" placeholder="Search...">
+    </form>
 
 
-
-  <div class="footer">
-
-    <div class="container">
-
-    	<div class="row">
-    		<div class="col-md-12">
-    			<div class="col-md-8">
-    				<a href="#">Terms of Service</a>
-            |
-    				<a href="#">Privacy</a>
-            |
-    				<a href="#">Disclaimer</a>
-    			</div>
-    			<div class="span4">
-    				<p class="muted pull-right">© 2017 Veva. All rights reserved</p>
-    			</div>
-    		</div>
-    	</div>
-    </div>
-    </div>
   </div>
 
 
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-</body>
+
+  <!-- Table -->
+  <div class="table-responsive">
+    <table class = "table" style="width:100%" id = "tokenTable">
+  <tr>
+    <th onclick="sortTable(0)">Rank</th>
+    <th onclick="sortTable(1)">Name</th>
+    <th onclick="sortTable(2)">Symbol</th>
+    <th onclick="sortCap(3)">Market Cap (USD)</th>
+    <th onclick="sortTable(4)">Consensus</th>
+    <th onclick="sortCap(5)">Last 5 Ratings</th>
+    <th onclick="sortTable(6)">Website</th>
+    <th onclick="sortTable(7)">Details</th>
+  </tr>
+
+  <tr>
+    <td>1</td>
+    <td>Ethereum</td>
+    <td>ETH</td>
+    <td>57,001,499</td>
+    <td>BEAR</td>
+    <td>3.3</td>
+    <td><a href link="https://www.ethereum.org/"> ethereum.org </a> </td>
+    <td>More</td>
+  </tr>
+
+  <tr>
+    <td>2</td>
+    <td>Bitcoin</td>
+    <td>BTC</td>
+    <td>48,707,911,554</td>
+    <td>BEAR</td>
+    <td>4.9</td>
+    <td><a href link="https://www.bitcoin.org/en/"> bitcoin.org </a> </td>
+    <td>More</td>
+  </tr>
+
+  <tr>
+    <td>3</td>
+    <td>Neo</td>
+    <td>NEO</td>
+    <td>1,166,659</td>
+    <td>BULL</td>
+    <td>8.9</td>
+    <td><a href link="https://www.neo.org/"> neo.org </a> </td>
+    <td>More</td>
+  </tr>
+
+  <tr>
+    <td>4</td>
+    <td>Tron</td>
+    <td>TRX</td>
+    <td>3,157,548</td>
+    <td>BEAR</td>
+    <td>1.8</td>
+    <td><a href link="https://www.tron.network/en.html"> tron.network </a> </td>
+    <td>More</td>
+  </tr>
+
+  <tr>
+    <td>5</td>
+    <td>Monero</td>
+    <td>XMR</td>
+    <td>9,731,330</td>
+    <td>BULL</td>
+    <td>8.0</td>
+    <td><a href link="https://www.getmonero.org/"> getmonero.org </a> </td>
+    <td>More</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Cardano</td>
+    <td>ADA</td>
+    <td>3,002,917</td>
+    <td>BEAR</td>
+    <td>3.3</td>
+    <td><a href link="https://www.cardano.org/en/home/"> cardano.org </a> </td>
+    <td>More</td>
+  </tr>
+
+  </table>
+</div>
+</div>
+</div>
+
+
+<div class="footer">
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-8">
+				<a href="#">Terms of Service</a>
+        |
+				<a href="#">Privacy</a>
+        |
+				<a href="#">Security</a>
+			</div>
+			<div class="span4">
+				<p class="muted pull-right">© 2017 Veva. All rights reserved</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("tokenTable");
+      switching = true;
+      //Set the sorting direction to ascending:
+      dir = "asc";
+      /*Make a loop that will continue until
+      no switching has been done:*/
+      while (switching) {
+        //start by saying: no switching is done:
+        switching = false;
+        rows = table.getElementsByTagName("TR");
+        /*Loop through all table rows (except the
+        first, which contains table headers):*/
+        for (i = 1; i < (rows.length - 1); i++) {
+          //start by saying there should be no switching:
+          shouldSwitch = false;
+          /*Get the two elements you want to compare,
+          one from current row and one from the next:*/
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          /*check if the two rows should switch place,
+          based on the direction, asc or desc:*/
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch= true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch= true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          /*If a switch has been marked, make the switch
+          and mark that a switch has been done:*/
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          //Each time a switch is done, increase this count by 1:
+          switchcount ++;
+        } else {
+          /*If no switching has been done AND the direction is "asc",
+          set the direction to "desc" and run the while loop again.*/
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+
+
+    function sortCap(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("tokenTable");
+      switching = true;
+      //Set the sorting direction to ascending:
+      dir = "asc";
+      /*Make a loop that will continue until
+      no switching has been done:*/
+      while (switching) {
+        //start by saying: no switching is done:
+        switching = false;
+        rows = table.getElementsByTagName("TR");
+        /*Loop through all table rows (except the
+        first, which contains table headers):*/
+        for (i = 1; i < (rows.length - 1); i++) {
+          //start by saying there should be no switching:
+          shouldSwitch = false;
+          /*Get the two elements you want to compare,
+          one from current row and one from the next:*/
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          /*check if the two rows should switch place,
+          based on the direction, asc or desc:*/
+          if (dir == "asc") {
+            if (parseFloat(x.innerHTML.replace(/,/g,'')) > parseFloat(y.innerHTML.replace(/,/g,''))) {
+              //if so, mark as a switch and break the loop:
+              //console.log (x.innerHTML.replace(/,/g,''))
+              shouldSwitch= true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (parseFloat(x.innerHTML.replace(/,/g,'')) < parseFloat(y.innerHTML.replace(/,/g,''))) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch= true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          /*If a switch has been marked, make the switch
+          and mark that a switch has been done:*/
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          //Each time a switch is done, increase this count by 1:
+          switchcount ++;
+        } else {
+          /*If no switching has been done AND the direction is "asc",
+          set the direction to "desc" and run the while loop again.*/
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+
+    </script>
+
+
+  </body>
 </html>
