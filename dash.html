@@ -22,6 +22,66 @@
 
 <style>
 
+
+.header {
+  display:flex;
+  justify-content: space-between;
+
+  padding-bottom: 15px;
+}
+
+.headerLogo {
+  max-width: 100px;
+  max-height: 85px;
+}
+
+.signup {
+padding: 20px;
+display:flex;
+align-items: flex-end;
+}
+
+.signText {
+  margin-left: 25px;
+  font-size: 18px;
+  font-style: italic;
+  color: #fd6731;
+}
+
+.lndBtn {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #fd6731;
+  color: #fd6731;
+  padding: 4px;
+  font-size: 18px;
+  min-width: 120px;
+  text-align:center;
+  border-radius:25px;
+margin-right:15px;
+}
+
+.lndBtn:hover {
+  color: white;
+  background-color: #fd6731;
+}
+
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.headText {
+  font-size: 60px;
+  line-height: .6;
+}
+
+
+
 .bg-dark {
   padding: 20px;
   background-color: #646566;
@@ -51,6 +111,11 @@
   padding-top: 10px;
 }
 
+
+#min15 {
+  width: 75%;
+  text-align: center;
+}
 
 .wrapper {
     display: flex;
@@ -204,49 +269,24 @@ justify-content: space-around;
 
   <body>
 
-
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">VEVA</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="./index.html">Home</a></li>
-            <li class="active"><a href="#">Tokens<span class="sr-only">(current)</span></a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="https://www.veva.one/platform">Protocol</a></li>
-                <li><a href="https://www.veva.one/paper">Whitepaper</a></li>
-                <li><a href="https://www.veva.one/about">Team</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Events</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Press</a></li>
-              </ul>
-            </li>
-            <li><a href="https://medium.com/@vevaone">Blog</a></li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Help</a></li>
-            <button type="button" class="btn btn-default navbar-btn">Sign in</button>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-
 <div class = "bg-light">
+
+    <div class= "header">
+
+    <img class="headerLogo" src="./resources/site/bg_white.jpeg">
+
+
+    <span><h1>veva.one  |  decentralized token ratings</h1> </span>
+
+      <div class="signup">
+
+      <a href="./index.html" class = "lndBtn"> <u> LOG OUT </u></a>
+      <a href="./help.html" class = "lndBtn"> <u> HELP </u> </a>
+
+    </div>
+      </div>
+
+
 
 
 
@@ -260,15 +300,33 @@ justify-content: space-around;
 
                    <!-- Sidebar Links -->
                    <ul class="list-unstyled components">
-                       <li class="active"><a href="#">Dash Home</a></li>
-                       <li><a href="#">Account</a></li>
+                       <li class="active"><a href="./dash.html">Dashboard</a></li>
+
                        <li><!-- Link with dropdown items -->
-                           <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Apply</a>
-                           <ul class="collapse list-unstyled" id="homeSubmenu">
-                               <li><a href="#">Jury</a></li>
-                               <li><a href="#">Analyst</a></li>
+                           <a href="#adminSub" data-toggle="collapse" aria-expanded="false">Admin</a>
+                           <ul class="collapse list-unstyled" id="adminSub">
+                               <li><a href="#">Analysts</a></li>
+                               <li><a href="#">Round Cycles</a></li>
                            </ul>
-                       <li><a href="#">Valuation</a></li>
+                         </li>
+                         <li><!-- Link with dropdown items -->
+                             <a href="#analystSub" data-toggle="collapse" aria-expanded="false">Analyst</a>
+                             <ul class="collapse list-unstyled" id="analystSub">
+                                 <li><a href="#">Dashboard</a></li>
+                                 <li><a href="#">Availability</a></li>
+                                 <li><a href="#">Survey</a></li>
+                             </ul>
+                           </li>
+                           <li><!-- Link with dropdown items -->
+                               <a href="#infoSub" data-toggle="collapse" aria-expanded="false">Info</a>
+                               <ul class="collapse list-unstyled" id="infoSub">
+                                   <li><a href="#">General Preview</a></li>
+                                   <li><a href="#">Tokens</a></li>
+                                   <li><a href="#">Rules</a></li>
+                                   <li><a href="#">About</a></li>
+                               </ul>
+                             </li>
+                       <li><a href="#">Account</a></li>
                        <li><a href="#">Referrals</a></li>
                    </ul>
                </nav>
@@ -424,47 +482,27 @@ justify-content: space-around;
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLongTitle"> Upcoming Events </h3>
+        <h2 class="modal-title" id="exampleModalLongTitle"> Survey Closing </h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
 
-
-
-
       <div class="modal-body">
         <div class = "dashCard">
+          <div class="alert alert-danger" id="min15" role="alert">
 
-          <div>
-          <h4>Week 1: Jan. 01</h4>
-          <span class="text-muted">Survey Due Jan. 06</span>
-          <br><span>Serve As:</span>
-          <form action="">
-          <input type="checkbox"> Analyst &nbsp; &nbsp;
-          <input type="checkbox"> Jury
-          </form>
-        </div>
-
-          <div>
-        <h4>Week 2: Jan. 08</h4>
-        <span class="text-muted">Survey Due Jan. 13</span>
-        <br><span>Serve As:</span>
-        <form action="">
-       <input type="checkbox"> Analyst &nbsp; &nbsp;
-       <input type="checkbox"> Jury
-       </form>
-     </div>
-
-     <div>
-       <h4>Week 3: Jan. 15</h4>
-       <span class="text-muted">Survey Due Jan. 20</span>
-       <br><span>Serve As:</span>
-       <form action="">
-      <input type="checkbox"> Analyst &nbsp; &nbsp;
-      <input type="checkbox"> Jury
-      </form>
-    </div>
+            Ripple Post-Survey will CLOSE in: 0:13:59
+            <br>
+            <br>
+            <a href="#" class="alert-link">
+              Click Here to Take Survey
+          </a>
+<br>
+          or
+          <br>
+          <i>see more details</i>
+          </div>
 
      </div>
 
@@ -475,8 +513,8 @@ justify-content: space-around;
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Apply!</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">No, thanks</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Go!</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">skip for now</button>
 
       </div>
     </div>
