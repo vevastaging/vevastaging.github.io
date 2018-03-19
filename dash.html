@@ -261,6 +261,35 @@ justify-content: space-around;
   justify-content: space-around;
 }
 
+.cardHead {
+  font-size: 26px;
+  display:flex;
+  justify-content: center;
+}
+
+.cardFlip {
+
+display:flex;
+justify-content: space-around;
+
+}
+
+.cardOne {
+  border-style: solid;
+  padding: 10px;
+  padding-bottom: 5px;
+}
+
+.cardButton {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display:flex;
+  justify-content: center;
+}
+
+.cardBottom {
+    padding-bottom: 0px !important;
+}
 
 </style>
 
@@ -290,9 +319,9 @@ justify-content: space-around;
 
 
 
-       <div class="wrapper">
+<div class="wrapper">
 
-               <nav id="sidebar">
+<nav id="sidebar">
                    <!-- Sidebar Header -->
                    <div class="sidebar-header">
                        <h3>VEVA</h3>
@@ -329,50 +358,211 @@ justify-content: space-around;
                        <li><a href="#">Account</a></li>
                        <li><a href="#">Referrals</a></li>
                    </ul>
-               </nav>
+</nav>
 
-               <div id="content">
 
-                   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                     <h1 class="page-header">Dashboard</h1>
 
-                     <div class="row placeholders dashFlex">
+<div id="content">
 
-                       <div class="placeholder">
+  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-                         <h4>Week 1: Jan. 01</h4>
-                         <span class="text-muted">Survey Due Jan. 06</span>
-                         <br><span>Serve As:</span>
-                         <form action="">
-                        <input type="checkbox"> Analyst &nbsp; &nbsp;
-                        <input type="checkbox"> Jury
-                        </form>
-                       </div>
+      <h1 class="page-header">Dashboard</h1>
 
-                       <div class="placeholder">
-                         <h4>Week 2: Jan. 08</h4>
-                         <span class="text-muted">Survey Due Jan. 13</span>
-                         <br><span>Serve As:</span>
-                         <form action="">
-                        <input type="checkbox"> Analyst &nbsp; &nbsp;
-                        <input type="checkbox"> Jury
-                        </form>
-                       </div>
+        <div class="row placeholders dashFlex">
 
-                       <div class="placeholder">
-                         <h4>Week 3: Jan. 15</h4>
-                         <span class="text-muted">Survey Due Jan. 20</span>
-                         <br><span>Serve As:</span>
-                         <form action="">
-                        <input type="checkbox"> Analyst &nbsp; &nbsp;
-                        <input type="checkbox"> Jury
-                        </form>
-                       </div>
+            <div class="alert alert-success alert-dismissible cardBottom" role="alert">
 
-                     </div>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <span class="cardHead"><strong>New Rounds!</strong> </span>
+              <br>
 
-                     <h2 class="sub-header">Recent Coverages</h2>
-                     <div class="table-responsive">
+                  <div class = "cardFlip">
+
+                      <div class="cardOne">
+
+                           <u>Jan. 1-Jan. 8</u>
+                           <br>
+                           <span>Serve As:</span>
+                           <form action="">
+                             <input type="checkbox"> Analyst &nbsp; &nbsp;
+                             <input type="checkbox"> Jury
+                           </form>
+                      </div>
+
+                      <div class="cardOne">
+                           <u>Jan. 8-Jan. 15</u>
+                           <br>
+                           <span>Serve As:</span>
+                           <form action="">
+                             <input type="checkbox"> Analyst &nbsp; &nbsp;
+                             <input type="checkbox"> Jury
+                           </form>
+                      </div>
+
+                      <div class="cardOne">
+                           <u>Jan. 15-Jan. 22</u>
+                           <br>
+                           <span>Serve As:</span>
+                           <form action="">
+                             <input type="checkbox"> Analyst &nbsp; &nbsp;
+                             <input type="checkbox"> Jury
+                           </form>
+                      </div>
+
+                      </div>
+
+                          <div class="cardButton">
+                            <br>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                          </div>
+            </div>
+
+
+            <div class="alert alert-danger alert-dismissible" role="alert">
+
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+
+                <span class="cardHead"><strong>Action Required!</strong> </span>
+                    <br>
+
+                    <div class = "cardFlip">
+
+                        <div class="cardOne">
+                          <u>Survey Due Today</u>
+                          <br>
+                          <span>Round 0x7cc8f12b</span>
+                          <br>
+                          Type: PRE
+                          <br>
+                          Token: Ripple
+
+                          <div class="cardButton">
+                            <br>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Take Now</button>
+                          </div>
+
+                        </div>
+
+                        <div class="cardOne">
+                          <u>Survey Due Today</u>
+                          <br>
+                          <span>Round 0x7cc8f12b</span>
+                          <br>
+                          Type: POST
+                          <br>
+                          TOKEN: Ripple
+
+                          <div class="cardButton">
+                            <br>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Take Now</button>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+              </div>
+
+
+
+              <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <div class = "cardFlip">
+                        <strong>Currently In Round</strong>
+                        <span class="text-muted"><i>Token Name Hidden</i></span>
+                          <span> Role: JURY </span>
+                          <span> Briefs Due: 3 days </span>
+                  </div>
+              </div>
+
+              <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <div class = "cardFlip">
+                        <strong>Currently In Round</strong>
+                        <span class="text-muted"><i>Token Name Hidden</i></span>
+                          <span> Role: JURY </span>
+                          <span> Briefs Due: 1 day </span>
+                  </div>
+              </div>
+
+              <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <div class = "cardFlip">
+                        <strong>Currently In Round</strong>
+                        <span class="text-muted"><i>Ripple (XRP)</i></span>
+                          <span> Role: LEAD | BULL </span>
+                          <span> Briefs Due: 4 days </span>
+                  </div>
+              </div>
+
+
+              <div class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                <span class="cardHead"><strong>Payment Received!</strong> </span>
+                <br>
+
+                <div class= "cardFlip">
+
+                  <div class="cardOne">
+                    <u>Round 0x20ba7c</u>
+                      <br>
+                      <span>
+                          Role: BULL Lead
+                          <br>
+                          Result: Loss
+                          <br>
+                          Payout: 1,000 veva
+                          <br>
+
+                          <i> details </i>
+                      </span>
+                  </div>
+
+                  <div class="cardOne">
+                    <u>Round 0x20ba7c</u>
+                      <br>
+                      <span>
+                          Role: BULL Lead
+                          <br>
+                          Result: Win
+                          <br>
+                          Payout: 4,000 veva
+                          <br>
+
+                          <i> details </i>
+                      </span>
+                  </div>
+
+                  <div class="cardOne">
+                    <u>Round 0x20ba7c</u>
+                      <br>
+                      <span>
+                         Role: Jury
+                         <br>
+                         Result: 32%
+                         <br>
+                         Payout: 0 veva
+                         <br>
+
+                         <i> details </i>
+                      </span>
+                    </div>
+
+
+                  </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+    <h2 class="sub-header">Recent Coverages</h2>
+    <div class="table-responsive">
                        <table class="table table-striped">
                          <thead>
                            <tr>
@@ -442,15 +632,12 @@ justify-content: space-around;
                          </tbody>
                        </table>
                      </div>
-                   </div>
 
 
-               <div>
+</div>
 
-       </div>
-
-   </div>
- </div>
+</div>
+</div>
 
 
 
