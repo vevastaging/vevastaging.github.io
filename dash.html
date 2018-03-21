@@ -264,13 +264,15 @@ justify-content: space-around;
 .cardHead {
   font-size: 26px;
   display:flex;
-  justify-content: center;
+  align-items: center;
 }
 
 .cardFlip {
 
 display:flex;
-justify-content: space-around;
+justify-content: space-between;
+padding-left: 10px;
+padding-right: 10px;
 
 }
 
@@ -289,6 +291,45 @@ justify-content: space-around;
 
 .cardBottom {
     padding-bottom: 0px !important;
+
+}
+
+.flexWrapper {
+width: 60%;
+
+}
+
+#content {
+  width:70%;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sidebar {
+  margin-right: 20px !important;
+}
+
+
+.alert-black {
+  background-color: mediumslateblue !important;
+  color: lightGrey;
+}
+
+.newRef {
+width: 70%;
+text-align: center;
+background-color: grey;
+  color: white;
+  padding: 10px;
+}
+
+.modalCenter {
+display: flex;
+justify-content: center;
+
 }
 
 </style>
@@ -300,7 +341,7 @@ justify-content: space-around;
 
 <div class = "bg-light">
 
-    <div class= "header">
+<div class= "header">
 
     <img class="headerLogo" src="./resources/site/bg_white.jpeg">
 
@@ -313,8 +354,7 @@ justify-content: space-around;
       <a href="./help.html" class = "lndBtn"> <u> HELP </u> </a>
 
     </div>
-      </div>
-
+</div>
 
 <hr>
 
@@ -358,204 +398,163 @@ justify-content: space-around;
                        <li><a href="./account.html">Account</a></li>
                        <li><a href="./referrals.html">Referrals</a></li>
                    </ul>
-</nav>
-
+  </nav>
 
 
 <div id="content">
 
-  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+<div class="flexWrapper">
+  <!-- <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main flexWrapper"> -->
+
 
       <h1 class="page-header">Dashboard</h1>
 
         <div class="row placeholders dashFlex">
 
+
+          <div class="alert alert-danger alert-dismissible cardBottom" role="alert">
+
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+            <br>
+
+
+
+          <a href="" data-toggle="modal" data-target="#surveyModal">
+                <div class = "cardFlip">
+                  <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="font-size:55px;"></span>
+
+                    <span class="cardHead"><strong>3 Surveys Due!</strong> </span>
+
+                    </div>
+          </a>
+          </div>
+
+
             <div class="alert alert-success alert-dismissible cardBottom" role="alert">
 
               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <span class="cardHead"><strong>New Rounds!</strong> </span>
+
+              <br>
+<a href="" data-toggle="modal" data-target="#newRoundModal">
+                  <div class = "cardFlip">
+                    <span class="glyphicon glyphicon-tower" aria-hidden="true" style="font-size:55px;"></span>
+
+                      <span class="cardHead"><strong>New Rounds Available!</strong> </span>
+
+                      </div>
+
+</a>
+            </div>
+
+            <div class="alert alert-danger alert-dismissible cardBottom" role="alert">
+
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
               <br>
 
+
+
+<a href="" data-toggle="modal" data-target="#inputModal">
                   <div class = "cardFlip">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="font-size:55px;"></span>
 
-                      <div class="cardOne">
-
-                           <u>Jan. 1-Jan. 8</u>
-                           <br>
-                           <span>Serve As:</span>
-                           <form action="">
-                             <input type="checkbox"> Analyst &nbsp; &nbsp;
-                             <input type="checkbox"> Jury
-                           </form>
-                      </div>
-
-                      <div class="cardOne">
-                           <u>Jan. 8-Jan. 15</u>
-                           <br>
-                           <span>Serve As:</span>
-                           <form action="">
-                             <input type="checkbox"> Analyst &nbsp; &nbsp;
-                             <input type="checkbox"> Jury
-                           </form>
-                      </div>
-
-                      <div class="cardOne">
-                           <u>Jan. 15-Jan. 22</u>
-                           <br>
-                           <span>Serve As:</span>
-                           <form action="">
-                             <input type="checkbox"> Analyst &nbsp; &nbsp;
-                             <input type="checkbox"> Jury
-                           </form>
-                      </div>
+                      <span class="cardHead"><strong>Ripple Brief Due!</strong> </span>
 
                       </div>
-
-                          <div class="cardButton">
-                            <br>
-                            <a href="./dash.html">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
-                          </a>
-                        </div>
+</a>
             </div>
 
 
-            <div class="alert alert-danger alert-dismissible" role="alert">
+            <div class="alert alert-warning alert-dismissible cardBottom" role="alert">
 
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
-                <span class="cardHead"><strong>Action Required!</strong> </span>
-                    <br>
+              <br>
+<a href="" data-toggle="modal" data-target="#roundInfoModalL">
+                  <div class = "cardFlip">
+                    <span class="glyphicon glyphicon-ok-circle" aria-hidden="true" style="font-size:55px;"></span>
 
-                    <div class = "cardFlip">
-
-                        <div class="cardOne">
-                          <u>Survey Due Today</u>
-                          <br>
-                          <span>Round 0x7cc8f12b</span>
-                          <br>
-                          Type: PRE
-                          <br>
-                          Token: Ripple
-
-                          <div class="cardButton">
-                            <br>
-                            <a href="./survey.html"> <button type="button" class="btn btn-primary" data-dismiss="modal">Take Now</button> </a>
-                          </div>
-
-                        </div>
-
-                        <div class="cardOne">
-                          <u>Survey Due Today</u>
-                          <br>
-                          <span>Round 0x7cc8f12b</span>
-                          <br>
-                          Type: POST
-                          <br>
-                          TOKEN: Ripple
-
-                          <div class="cardButton">
-                            <br>
-                            <a href="./survey.html"> <button type="button" class="btn btn-primary" data-dismiss="modal">Take Now</button> </a>
-                          </div>
-
-                        </div>
+                      <span class="cardHead"><strong>Round Confirmed (LEAD)!</strong> </span>
 
                       </div>
 
-              </div>
+</a>
+            </div>
 
 
+            <div class="alert alert-info alert-dismissible cardBottom" role="alert">
 
-              <div class="alert alert-warning alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+              <br>
+<a href="./account.html">
                   <div class = "cardFlip">
-                        <strong>Currently In Round</strong>
-                        <span class="text-muted"><i>Token Name Hidden</i></span>
-                          <span> Role: JURY </span>
-                          <span> Briefs Due: 3 days </span>
-                  </div>
-              </div>
+                    <span class="glyphicon glyphicon-usd" aria-hidden="true" style="font-size:55px;"></span>
 
-              <div class="alert alert-warning alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <span class="cardHead"><strong>New VEVA Payment!</strong> </span>
+
+                      </div>
+
+</a>
+            </div>
+
+
+
+            <div class="alert alert-danger alert-dismissible cardBottom" role="alert">
+
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+              <br>
+            <a href="./account.html">
                   <div class = "cardFlip">
-                        <strong>Currently In Round</strong>
-                        <span class="text-muted"><i>Token Name Hidden</i></span>
-                          <span> Role: JURY </span>
-                          <span> Briefs Due: 1 day </span>
-                  </div>
-              </div>
+                    <span class="glyphicon glyphicon-briefcase" aria-hidden="true" style="font-size:55px;"></span>
 
-              <div class="alert alert-warning alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <span class="cardHead"><strong>Lead Brief Reviewable!</strong> </span>
+
+                      </div>
+
+            </a>
+            </div>
+
+
+            <div class="alert alert-black alert-dismissible cardBottom" role="alert">
+
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+              <br>
+<a href="" data-toggle="modal" data-target="#newRefModal">
                   <div class = "cardFlip">
-                        <strong>Currently In Round</strong>
-                        <span class="text-muted"><i>Ripple (XRP)</i></span>
-                          <span> Role: LEAD | BULL </span>
-                          <span> Briefs Due: 4 days </span>
-                  </div>
-              </div>
+                    <span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size:55px;"></span>
+
+                      <span class="cardHead"><strong>New Referral Available!</strong> </span>
+
+                      </div>
+
+</a>
+            </div>
 
 
-              <div class="alert alert-info alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="alert alert-warning alert-dismissible cardBottom" role="alert">
 
-                <span class="cardHead"><strong>Payment Received!</strong> </span>
-                <br>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
-                <div class= "cardFlip">
+              <br>
+<a href="" data-toggle="modal" data-target="#roundProgModalJ">
+                  <div class = "cardFlip">
+                    <span class="glyphicon glyphicon-ok-circle" aria-hidden="true" style="font-size:55px;"></span>
 
-                  <div class="cardOne">
-                    <u>Round 0x20ba7c</u>
-                      <br>
-                      <span>
-                          Role: BULL Lead
-                          <br>
-                          Result: Loss
-                          <br>
-                          Payout: 1,000 veva
-                          <br>
+                      <span class="cardHead"><strong>In Progress (JURY)!</strong> </span>
 
-                          <i> details </i>
-                      </span>
-                  </div>
+                      </div>
 
-                  <div class="cardOne">
-                    <u>Round 0x20ba7c</u>
-                      <br>
-                      <span>
-                          Role: BULL Lead
-                          <br>
-                          Result: Win
-                          <br>
-                          Payout: 4,000 veva
-                          <br>
-
-                          <i> details </i>
-                      </span>
-                  </div>
-
-                  <div class="cardOne">
-                    <u>Round 0x20ba7c</u>
-                      <br>
-                      <span>
-                         Role: Jury
-                         <br>
-                         Result: 32%
-                         <br>
-                         Payout: 0 veva
-                         <br>
-
-                         <i> details </i>
-                      </span>
-                    </div>
+</a>
+            </div>
 
 
-                  </div>
-              </div>
+
+
+
 
             </div>
 
@@ -563,80 +562,9 @@ justify-content: space-around;
 
 
 
-    <h2 class="sub-header">Recent Coverages</h2>
-    <div class="table-responsive">
-                       <table class="table table-striped">
-                         <thead>
-                           <tr>
-                             <th>Date</th>
-                             <th>Role</th>
-                             <th>Token</th>
-                             <th>Symbol</th>
-                             <th>Outcome</th>
-                             <th>Payout</th>
-                             <th>Briefs</th>
-                             <th>Details</th>
-                           </tr>
-
-                           <tr>
-                             <td>03/01/18</td>
-                             <td>Jury</td>
-                             <td>Civic</td>
-                             <td>CVC</td>
-                             <td>BEAR Sway (-3.1)</td>
-                             <td>1,000 VEVA</td>
-                             <td><a href link="#"> [link] </a> </td>
-                             <td>More</td>
-                           </tr>
-
-                           <tr>
-                             <td>02/27/18</td>
-                             <td>BULL Analyst</td>
-                             <td>Ethereum</td>
-                             <td>ETH</td>
-                             <td>NO Sway (-0.6)</td>
-                             <td>11,000 VEVA</td>
-                             <td><a href link="#"> [link] </a> </td>
-                             <td>More</td>
-                           </tr>
-
-                           <tr>
-                             <td>02/19/18</td>
-                             <td>BEAR Analyst</td>
-                             <td>Neo</td>
-                             <td>NEO</td>
-                             <td>BULL Sway (+2.6)</td>
-                             <td>6,000 VEVA</td>
-                             <td><a href link="#"> [link] </a> </td>
-                             <td>More</td>
-                           </tr>
-
-                           <tr>
-                             <td>2/11/18</td>
-                             <td>Jury</td>
-                             <td>Iconomi</td>
-                             <td>ICN</td>
-                             <td>NO Sway (-1.8)</td>
-                             <td>0 VEVA</td>
-                             <td><a href link="#"> [link] </a> </td>
-                             <td>More</td>
-                           </tr>
-                           <tr>
-                             <td>2/01/18</td>
-                             <td>BEAR Analyst</td>
-                             <td>Ripple</td>
-                             <td>XRP</td>
-                             <td>BEAR Sway (-2.2)</td>
-                             <td>11,000 VEVA</td>
-                             <td><a href link="#"> [link] </a> </td>
-                             <td>More</td>
-                           </tr>
-                         </tbody>
-                       </table>
-                     </div>
-
 
 </div>
+
 
 </div>
 </div>
@@ -667,6 +595,217 @@ justify-content: space-around;
 </div>
 
 
+<!-- Modal -->
+<div class="modal fade" id="inputModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Brief Upload</h4>
+      </div>
+      <div class="modal-body">
+
+
+        <form action="">
+  <input type="file" name="pic" accept="image/*">
+</form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Submit!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Survey</h4>
+      </div>
+      <div class="modal-body">
+
+<img src="./resources/survey/survey1.png" style="max-width:100%">
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Submit!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="newRoundModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New Rounds!</h4>
+      </div>
+      <div class="modal-body">
+
+        <div class = "cardFlip">
+
+            <div class="cardOne">
+
+                 <u>Jan. 1-Jan. 8</u>
+                 <br>
+                 <span>Serve As:</span>
+                 <form action="">
+                   <input type="checkbox"> Analyst &nbsp; &nbsp;
+                   <input type="checkbox"> Jury
+                 </form>
+            </div>
+
+            <div class="cardOne">
+                 <u>Jan. 8-Jan. 15</u>
+                 <br>
+                 <span>Serve As:</span>
+                 <form action="">
+                   <input type="checkbox"> Analyst &nbsp; &nbsp;
+                   <input type="checkbox"> Jury
+                 </form>
+            </div>
+
+            <div class="cardOne">
+                 <u>Jan. 15-Jan. 22</u>
+                 <br>
+                 <span>Serve As:</span>
+                 <form action="">
+                   <input type="checkbox"> Analyst &nbsp; &nbsp;
+                   <input type="checkbox"> Jury
+                 </form>
+            </div>
+
+            </div>
+
+                <div class="cardButton">
+                  <br>
+                  <a href="./dash.html">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                </a>
+              </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Submit!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="roundInfoModalL" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Round Info</h4>
+      </div>
+      <div class="modal-body">
+
+<h2> Round Start: March 28, 2018 14:30 UCT </h2>
+
+        <ul class="list-group">
+          <li class="list-group-item">Token: <i>not available</i></li>
+          <li class="list-group-item">Role: Lead (BEAR)</li>
+          <li class="list-group-item">Briefs Due: April 2, 2018 14:30 UCT</li>
+          <li class="list-group-item">Surveys Due: April 5, 2018 14:30 UCT</li>
+          <li class="list-group-item">Purse: 7,000 VEVA</li>
+        </ul>
+        <i> Results posted: April 10, 2018 12:00 UTC </i>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="roundProgModalJ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Round Info</h4>
+      </div>
+      <div class="modal-body">
+
+<h2> Round Start: March 19, 2018 11:30 UCT </h2>
+
+        <ul class="list-group">
+          <li class="list-group-item">Token: <i>Neo (NEO)</i></li>
+          <li class="list-group-item">Role: JURY</li>
+          <li class="list-group-item">Briefs Due: April 4, 2018 11:30 UCT</li>
+          <li class="list-group-item">Surveys Due: April 7, 2018 11:30 UCT</li>
+          <li class="list-group-item">Purse: 6,500 VEVA</li>
+        </ul>
+        <i> Results posted: April 12, 2018 12:00 UTC </i>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="newRefModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Referral Status</h4>
+      </div>
+      <div class="modal-body modalCenter">
+
+
+        <div class="newRef">
+
+        <span class="glyphicon glyphicon-gift" aria-hidden="true" style="font-size:55px;"></span>
+        <br>
+        <br>
+
+        You have a new referral available!
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Later</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Use</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
 <div id="dashBox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -709,6 +848,7 @@ justify-content: space-around;
     </div>
   </div>
 </div>
+-->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
