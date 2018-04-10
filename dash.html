@@ -426,10 +426,10 @@ justify-content: center;
         <div class="row placeholders dashFlex">
 
 
-          <div class="panel panel-danger card">
+          <div class="panel panel-danger card" id="briefDueP">
             <div class="panel-heading">
               <h3 class="panel-title">Due In: 1h:12m
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <button type="button" class="close" data-target="#briefDueP" data-dismiss="alert"> <span aria-hidden="true">&times;</span>
             </h3>
             </div>
 
@@ -445,16 +445,22 @@ justify-content: center;
           </a>
             <div style="display:flex; justify-content:flex-end">
 
+              <a href="" data-toggle="modal" data-target="#inputModal">
               <span style="color:blue"><u>Submit Now</u></span>
+            </a>
 
-              <span style= "padding-left:10px; padding-right:10px">No, Thanks</span>
+
+<a href="">
+              <span type="button" style="padding-left:10px; padding-right:10px" data-target="#briefDueP" data-dismiss="alert">Later</span>
+</a>
+
 
             </div>
           </div>
 
 
 
-          <div class="panel panel-danger card">
+          <div class="panel panel-danger card" id="surveyP">
             <div class="panel-heading">
               <h3 class="panel-title">Due In: 1d:59m:18h
               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -472,9 +478,17 @@ justify-content: center;
                 <br>
 
                 <ul class="list-group">
-                  <li class="list-group-item">Pre-Survey: Ethereum (ETH)</li>
-                  <li class="list-group-item">Pre-Survey: Ark (ARK)</li>
-                  <li class="list-group-item">Post-Survey: Neo (NEO)</li>
+                  <li class="list-group-item" style="display:flex; justify-content:space-between">Pre-Survey: Ethereum (ETH)
+<span style="color:blue"> Take Now </span>
+
+                    </li>
+                  <li class="list-group-item" style="display:flex; justify-content:space-between">Pre-Survey: Ark (ARK)
+<span style="color:blue"> Take Now </span>
+
+                  </li>
+                  <li class="list-group-item" style="display:flex; justify-content:space-between">Post-Survey: Neo (NEO)
+<span style="color:blue"> Take Now </span>
+                  </li>
 
                 </ul>
 
@@ -484,20 +498,24 @@ justify-content: center;
 
               <span style="color:blue"><u>Take Survey</u></span>
 
-              <span style= "padding-left:10px; padding-right:10px">Later</span>
+              <a href="">
+                            <span type="button" style="padding-left:10px; padding-right:10px" data-target="#surveyP" data-dismiss="alert">Later</span>
+              </a>
 
             </div>
           </div>
 
-          <div class="panel panel-success card">
+
+
+
+
+
+          <div class="panel panel-success card" id="newRoundsP">
             <div class="panel-heading">
               <h3 class="panel-title">Signups Close In: 4d:3h:15m
               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </h3>
             </div>
-
-
-
             <div class="panel-body cardFlip">
               <span class="glyphicon glyphicon-tower" aria-hidden="true" style="font-size:55px;"></span>
               <div class="cardHead"><strong>New Cycles Available!</strong> </div>
@@ -533,14 +551,16 @@ justify-content: center;
 
               <span style="color:blue"><u>See More</u></span>
 
-              <span style= "padding-left:10px; padding-right:10px">No, Thanks</span>
+              <a href="">
+                            <span type="button" style="padding-left:10px; padding-right:10px" data-target="#newRoundsP" data-dismiss="alert">No, Thanks</span>
+              </a>
 
             </div>
           </div>
 
 
 
-          <div class="panel panel-warning card">
+          <div class="panel panel-warning card" id="roundStartP">
             <div class="panel-heading">
               <h3 class="panel-title">Started: 12:00 UCT March 21, 2018
               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -559,12 +579,14 @@ justify-content: center;
 
             <div style="display:flex; justify-content:flex-end">
 
-              <span style="color:blue; padding-left:10px; padding-right:10px"><u>Got It!</u></span>
+              <a href="">
+                            <span type="button" style="padding-left:10px; padding-right:10px" data-target="#roundStartP" data-dismiss="alert">Later</span>
+              </a>
 
             </div>
           </div>
 
-          <div class="panel panel-info card">
+          <div class="panel panel-info card" id="referralSendP">
             <div class="panel-heading">
               <h3 class="panel-title">Posted: 09:20 UCT March 19, 2018
               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -580,12 +602,14 @@ justify-content: center;
             <div style="padding-left:10px; padding-right:10px">
                 You have a new referral available! Remember, not only do your referrals keep the VEVA ecosystem healthy, they earn you extra tokens through referral bonuses. You can track your referrals on your account page!
             </div>
-      
+
             <div style="display:flex; justify-content:flex-end">
 
               <span style="color:blue"><u>Send Referral</u></span>
 
-              <span style= "padding-left:10px; padding-right:10px">Later</span>
+              <a href="">
+                            <span type="button" style="padding-left:10px; padding-right:10px" data-target="#referralSendP" data-dismiss="alert">Later</span>
+              </a>
 
             </div>
           </div>
