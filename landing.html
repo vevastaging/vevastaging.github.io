@@ -7,6 +7,10 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Veva</title>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -17,131 +21,728 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <!-- FONTS  -->
+    <link href='https://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin Slab' rel='stylesheet'>
+
+
 <style>
+
 body, html {
     height: 100%;
     margin: 0;
+    background-color: black;
+    font-family: 'Josefin Slab';
+    color:white;
+
 }
+
+.header {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding-bottom: 15px;
+}
+
+.headText {
+  font-family: 'Philosopher';
+  font-size: 40px;
+  color: #4db8ff;
+}
+
+.headerLogo {
+  max-width: 100px;
+  max-height: 85px;
+}
+
+.signup {
+
+padding:5px;
+text-align: center;
+
+  /*
+padding: 20px;
+display:flex;
+align-items: flex-end;
+*/
+}
+
+.lndBtn {
+/*  border-style: solid;
+  border-width: 2px;
+  border-color: white;*/
+  color: white;
+  /*padding: 4px;*/
+  font-size: 20px;
+  min-width: 120px;
+  margin-right: 20px;
+
+  /*border-radius:25px;
+margin-right:15px;*/
+}
+
+.lndBtnX {
+color: black;
+}
+
+.borderText {
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  max-width: 50%;
+  font-size: 15px;
+  margin-right: 20px;
+  padding-left: 8px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+}
+
+.joinTme {
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+
 .bg {
-    /* The image used */
-    background-color: white;
+  /* The image used */
+    background-image: url("./resources/landing/background.png");
+
     /* Full height */
     height: 100%;
+
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+      margin-bottom: 30px;
+
 }
-.bodyDiv {
-display:flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
-}
-.backLogo {
-  max-width:33%;
-}
-.buttonRow {
-  width: 40%;
+
+.borderCenter {
+  height: 80%;
   display:flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-.signup {
-padding: 20px;
+
+.vevaText {
+  text-align: center;
+  font-family: 'Josefin Slab';
+  color:white;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+
+.subText {
+  text-align: center;
+  font-family: 'Josefin Slab';
+  color:white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+
+.textCenter {
+  padding-right: 5px;
+  padding-left: 5px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.downMenu {
+  display: flex;
+  justify-content: center;
+}
+
+.ratings {
+
+  padding: 30px;
+  background-color: black;
+  margin-bottom: 30px;
+
+  /*background-image: url("./resources/landing/red.jpg"); */
+
+  /*opacity: 0.2;
+    filter: alpha(opacity=50);*/
+     /* For IE8 and earlier */
+
+  /* Full height */
+
+
 display:flex;
-justify-content: flex-end;
+justify-content: space-around;
+
+
+
+  max-height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  text-align: center;
+  font-family: 'Josefin Slab';
+  color:white;
+  font-size: 20px;
+
 }
-.button-space {
-  margin-left: 25px;
+
+.coinCard {
+
+  max-width:25%;
+  display:flex;
+  flex-direction: column;
 }
-.buttonPad {
-  margin-top: 30px;
+
+.hr {
+  color: white;
+  display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+  background-color:white;
 }
-.signText {
-  margin-left: 25px;
-  font-size: 18px;
-  font-style: italic;
-  color: #fd6731;
+
+.centerLine {
+  display: flex;
+  justify-content: center;
 }
-.lndBtn {
+
+.hrLong {
+  max-width: 80%;
+  color: white;
+  display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+  background-color:white;
+}
+
+.topTitle {
+  margin-bottom: -10px !important;
+}
+
+
+.rLDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 30px;
+
+}
+
+.ratingLink {
+  color: white;
   border-style: solid;
   border-width: 2px;
-  border-color: #fd6731;
-  color: #fd6731;
-  padding: 5px;
+  border-color: white;
+  max-width: 30%;
   font-size: 25px;
-  min-width: 200px;
-  text-align:center;
-  border-radius:25px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
 }
-.lndBtn:hover {
-  color: white;
-  background-color: #fd6731;
+
+.downMenuLow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
+
+
+.aboutText {
+  font-size: 25px;
+
+}
+
+.roundImg {
+
+border-style: solid;
+border-width: 2px;
+
+border-radius: 50%;
+max-width: 15%;
+max-height: 15%;
+
+opacity: .6;
+
+}
+
+.roundImgBB {
+
+border-style: solid;
+border-width: 2px;
+
+border-radius: 50%;
+max-width: 20%;
+max-height: 20%;
+
+opacity: .4;
+
+}
+
+
+.aboutBlock {
+
+  max-width: 75%;
+
+  display:flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lowerBG {
+  /* The image used */
+    background-image: url("./resources/landing/lowerBG.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 30px;
+    padding-top: 30px;
+
+}
+
+.textBlock {
+
+max-width: 60%;
+font-size: 20px;
+
+}
+
+.theProduct {
+  padding-bottom: 20px;
+}
+
+.whyAdv {
+
+background-color: #282828;
+padding-top: 10px;
+padding-bottom: 30px;
+margin-top: 10px;
+margin-bottom: 20px;
+
+}
+
+
+.bottomBG {
+  /* The image used */
+    background-image: url("./resources/landing/nylon.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 30px;
+    padding-top: 30px;
+
+}
+
+
+.footerBlock {
+
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+/*subscription*/
+
+.home-newsletter {
+padding-top: 10px;
+margin-bottom: 45px;
+background: black;
+}
+
+.home-newsletter .single {
+max-width: 650px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 2; }
+
+.home-newsletter .single h2 {
+font-size: 22px;
+color: white;
+text-transform: uppercase;
+margin-bottom: 40px; }
+
+.home-newsletter .single .form-control {
+height: 50px;
+background: rgba(255, 255, 255, 0.6);
+border-color: transparent;
+border-radius: 20px 0 0 20px; }
+
+.home-newsletter .single .form-control:focus {
+box-shadow: none;
+border-color: #243c4f; }
+
+.home-newsletter .single .btn {
+min-height: 50px;
+border-radius: 0 20px 20px 0;
+background: #336699;
+color: #fff;
+}
+
+
+
+input[type=text] {
+  color: black;
+    width: 430px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('./resources/site/search.png');
+    background-size: 25px 25px;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+
+/*
+input[type=text]:focus {
+    width: 100%;
+}
+*/
+
 </style>
-
-<!-- style notes:  aqua: #31EDFD  -->
-
 
   </head>
 
 
-  <body class="bg">
+  <body>
 
-<div class="signup">
 
-<a href link="#" class = "signText"> <u> SIGN IN </u></a>
-<a href link="#" class = "signText"> <u> REGISTER </u> </a>
+
+<div class="bg">
+
+
+  <div class= "header">
+
+
+<span class="headText"> VEVA </span>
+
+<span><h5></h5> </span>
+
+    <div class="signup">
+
+    <a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.p" class = "lndBtn"> <u> paper </u> </a>
+    <a href="https://www.veva.one/about" class = "lndBtn"> <u> about </u> </a>
+    <a href="https://medium.com/@vevaone" class = "lndBtn"> <u> blog </u> </a>
+    <a href="./login.html" class = "lndBtn"> <u> login </u> </a>
+    <a href="https://t.me/vevaone" class = "borderText"> <u> Join Our Telegram </u> </a>
+    <a href="./onboarding.html" class = "lndBtnX"> <u> . </u> </a>
+
+
+  </div>
+</div>
+
+<div class="borderCenter">
+
+    <div>
+      <div class="vevaText">
+          Human Neural Network
+      </div>
+      <div class="subText">
+        VEVA is a conflit-proof network of trustless experts.  Our
+        system brings the prosecutor-and-jury model to token ratings, resulting in
+        quality data that has been objectively challenged.
+
+      </div>
+    </div>
+
+
+
+
+      <form>
+      <input type="text" name="search" placeholder="Find a Coin....">
+      </form>
+
+
+
+  </div>
+
+<div class="downMenu">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="font-size:55px;"></span>
+</div>
 
 </div>
 
-<div class="bodyDiv">
-
-    <img src = "./resources/site/bg_white.jpeg" class="backLogo" >
-
-<br>
-
-    <p class = "buttonRow buttonPad">
 
 
-
-        <a href="./ratings.html" class="lndBtn">Ratings</a>
-
-        <a href="./dash.html" class="lndBtn">Dashboard</a>
-
-    </p>
+<div class="ratings">
 
 
+<div class="coinCard">
 
+  <span class="glyphicon glyphicon-heart-empty" aria-hidden="true" style="font-size:55px;"></span>
 
-  <div class="footer">
+  <h2 class="topTitle">Biggest Bull Sway</h2>
+  <hr class="hr">
 
-    <div class="container">
-
-    	<div class="row">
-    		<div class="col-md-12">
-    			<div class="col-md-8">
-    				<a href="#">Terms of Service</a>
-            |
-    				<a href="#">Privacy</a>
-            |
-    				<a href="#">Disclaimer</a>
-    			</div>
-    			<div class="span4">
-    				<p class="muted pull-right">© 2017 Veva. All rights reserved</p>
-    			</div>
-    		</div>
-    	</div>
-    </div>
-    </div>
+  <div class="caption">
+    <h3>Ethereum</h3>
+    <p><i>Analyst 0x7c901d4a: </i> "Ethereum has had its share of troubles recently, from scaling issues
+      to major crackdowns on ICOs. However, the move to PoS may stablize the project."</p>
+    <p><a href="#" class="btn btn-primary" role="button">Details</a> <a href="#" class="btn btn-default" role="button">Briefs</a></p>
   </div>
 
 
+</div>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-</body>
+
+<div class="coinCard">
+
+<span class="glyphicon glyphicon-bell" aria-hidden="true" style="font-size:55px;"></span>
+
+<h2 class="topTitle">Most Controversial</h2>
+<hr class="hr">
+
+<div class="caption">
+  <h3>Ripple</h3>
+  <p><i>Analyst 0x101ff9a2: </i> "From claims of centralization to recent lawsuits, Ripple has seen mostly downward pressures. Throughout this, partnership announcements have given hope."</p>
+  <p><a href="#" class="btn btn-primary" role="button">Details</a> <a href="#" class="btn btn-default" role="button">Briefs</a></p>
+</div>
+
+</div>
+
+
+
+
+
+<div class="coinCard">
+
+  <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true" style="font-size:55px;"></span>
+
+<h2 class="topTitle">Biggest Bear Sway</h2>
+<hr class="hr">
+
+<div class="caption">
+  <h3>Neo</h3>
+  <p><i>Analyst 0xa88cb4e7: </i> "Neo has been on a bullish trend lately, solidfying its position as the most stable
+    token (percentage-wise) in the recent bear market—all while adoption is increasing."</p>
+  <p><a href="#" class="btn btn-primary" role="button">Details</a> <a href="#" class="btn btn-default" role="button">Briefs</a></p>
+</div>
+
+</div>
+</div>
+
+<div class="rLDiv">
+<div class="ratingLink">
+<span>VIEW FULL RATINGS</span>
+</div>
+</div>
+
+<div class="downMenuLow">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="font-size:55px;"></span>
+</div>
+
+
+<!--
+<br>
+<div class="centerLine">
+<hr class="hrLong">
+</div>
+<br>
+-->
+
+
+<div class="aboutVeva lowerBG">
+
+<center>
+
+<h1>What is VEVA?</h1>
+
+<h3> Our Protocol: <i>Inspired by a prosecutor-and-jury model</i></h3>
+
+
+<div class="aboutBlock">
+<div class="aboutText">
+Objectives:
+<br>
+
+
+Decentralize analysis and judgment
+<br>
+Extract best facts & arguments
+<br>
+Minimize noise and bias
+<br>
+Evolving Neural Network of Analysts
+</div>
+
+<img src="./resources/landing/gavel.jpg" class="roundImg">
+
+</div>
+
+<hr class="hrLong">
+
+<div class="aboutBlock">
+<img src="./resources/landing/bullBear.jpg" class="roundImgBB">
+<div class="aboutText">
+
+VEVA Valuation rounds:
+<br>
+1. Lead & jury analysts are randomly assigned to round
+<br>
+2. Leads produce bull & bear analyses
+<br>
+3. Lead analyst who sways jury wins rounds
+<br>
+4. Purse split between lead analysts (winning and losing) and jurors (using Keynesian beauty contest logic to rank jurors)
+
+</div>
+</div>
+
+</center>
+
+</div>
+
+
+<div>
+<center>
+<h1><u> The Product </u></h1>
+
+<div class="aboutBlock theProduct">
+
+<div>
+<h3>Detailed Analyses and Ratings</h3>
+
+On every token, every month, to converge on truth
+<br>
+Review of team, product, market, token-economics, and resources
+<br>
+Available via a free search engine (and API)
+</div>
+
+<div>
+<h3>Decentralized Network of Analysts</h3>
+
+Peer-recruited & Peer-reviewed
+<br>
+Experts in wide range of relevant fields
+<br>
+Global/Scalable network to support lots of tokens
+</div>
+
+</div>
+
+
+<div class="whyAdv bottomBG">
+
+<h1> <u> Why adversarial ratings? </u></h1>
+
+<div class="textBlock">
+Decentralized computing is really trustless computing.  Bitcoin / Ethereum organizes a p2p ledger assuming nodes are unreliable or corrupt; the proof-of-work protocol ensures good behavior and a robust/trusted network.
+<br>
+<br>
+​
+
+Similarly, VEVA is a peer-to-peer network of trustless experts. We assume analysts are either incompetent, lazy, conflicted, or corrupted and work backwards. The game theoretical mechanics eliminates bad actors/actions to provide the highest quality token analysis platform ever.
+<br>
+<br>
+​
+
+As VEVA grows the network maintains high and verifiable standards of quality / integrity. Many are aware of the mortgage securities rating scandals of 2008; we are committed to building a ratings platform that is conflict/collusion proof.
+</div>
+</div>
+</center>
+</div>
+
+<div>
+</div>
+
+
+<div>
+
+  <section class="home-newsletter">
+  <div class="container">
+  <div class="row">
+  <div class="col-sm-12">
+  	<div class="single">
+  		<h2>Want Updates? Join our Mailing List!</h2>
+  	<div class="input-group">
+           <input type="email" class="form-control" placeholder="Enter your email">
+           <span class="input-group-btn">
+           <button class="btn btn-theme" type="submit">Subscribe</button>
+           </span>
+            </div>
+  	</div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+</div>
+
+
+
+		<div class="footerBlock">
+			<div>
+				<a href="#">Terms of Service</a>
+        |
+				<a href="#">Privacy</a>
+        |
+				<a href="#">Security</a>
+			</div>
+
+      <div>
+        MEDIUM | TELEGRAM | GITHUB | TWITTER | EMAIL
+      </div>
+
+			<div>
+				<p class="muted pull-right">© 2017 Veva. All rights reserved</p>
+			</div>
+		</div>
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+  </body>
 </html>
