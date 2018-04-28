@@ -1,0 +1,783 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Information -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <title>VEVA</title>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107044894-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)};
+            gtag('js', new Date());
+
+            gtag('config', 'UA-107044894-1');
+        </script>
+        <!-- Basic meta -->
+    <meta name="description" content="VEVA: decentralized token ratings for ICOs and blockchain tokens">
+
+    <meta property="og:image" content="https://coinremix.com/img/facebook-meta.png">
+
+    <meta name="robots" content="index,follow"><!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+    <meta name="subject" content="Cryptocurrency Analysis">
+    <meta name="rating" content="General">
+    <link rel="canonical" href="https://www.vevastaging.github.io" />
+    <link rel="author" href="humans.txt">
+    <link rel="index" href="https://www.vevastaging.github.io">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon.ico">
+
+    <!-- For Safari for iOS: -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Coinremix">
+    <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6: -->
+    <link rel="apple-touch-icon" sizes="72x72" href="https://coinremix.com/img/touch-icon-72.png">
+    <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7: -->
+    <link rel="apple-touch-icon" sizes="76x76" href="https://coinremix.com/img/touch-icon-76.png">
+    <!-- For iPhone with @2× display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon" sizes="114x114" href="https://coinremix.com/img/touch-icon-114.png">
+    <!-- For iPhone with @2× display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon" sizes="120x120" href="https://coinremix.com/img/touch-icon-120.png">
+    <!-- For iPad with @2× display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon" sizes="144x144" href="https://coinremix.com/img/touch-icon-144.png">
+    <!-- For iPad with @2× display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon" sizes="152x152" href="https://coinremix.com/img/touch-icon-152.png">
+    <!-- For iPad Pro: -->
+    <link rel="apple-touch-icon" sizes="167x167" href="https://coinremix.com/img/touch-icon-167.png">
+    <!-- For iPhone 6 Plus with @3× display: -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://coinremix.com/img/touch-icon-180.png">
+
+    <!-- For Chrome for Android: -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#155BE5">
+    <!-- 192px (xxxhdpi): -->
+    <link rel="icon" sizes="192x192" href="https://coinremix.com/img/touch-icon-192.png">
+    <!-- 144px (xxhdpi): -->
+    <link rel="icon" sizes="144x144" href="https://coinremix.com/img/touch-icon-144.png">
+    <!-- 96px (xhdpi): -->
+    <link rel="icon" sizes="96x96" href="https://coinremix.com/img/touch-icon-96.png">
+    <!-- 72px (hdpi): -->
+    <link rel="icon" sizes="72x72" href="https://coinremix.com/img/touch-icon-72.png">
+    <!-- 48px (mdpi): -->
+    <link rel="icon" sizes="48x48" href="https://coinremix.com/img/touch-icon-48.png">
+    <!-- 36px (ldpi): -->
+    <link rel="icon" sizes="36x36" href="https://coinremix.com/img/touch-icon-36.png">
+
+    <!-- For Windows -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible"> <!-- Stops skype formatting tel -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="application-name" content="CoinRemix">
+    <meta name="msapplication-tooltip" content="Spend your time making trades, not spreadsheets. We create in-depth ICO reviews to help investors make sense of blockchain projects and invest smarter.">
+    <meta name="msapplication-starturl" content="http://coinremix.com">
+    <meta name="msapplication-navbutton-color" content="#0D379D">
+    <meta name="msapplication-window" content="width=1024;height=768">
+    <meta name="msapplication-TileColor" content="#155BE5">
+    <meta name="msapplication-TileImage" content="/img/win-tile-150.jpg">
+
+    <!-- Facebook meta -->
+    <meta property="og:url" content="https://www.coinremix.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CoinRemix">
+    <meta property="og:image" content="https://coinremix.com/img/facebook-meta.png">
+    <meta property="og:description" content="Spend your time making trades, not spreadsheets. We create in-depth ICO reviews to help investors make sense of blockchain projects and invest smarter.">
+    <meta property="og:site_name" content="CoinRemix">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="Coinremix">
+
+    <!-- Twitter meta -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@coinremix">
+    <meta name="twitter:creator" content="@coinremix">
+    <meta name="twitter:url" content="https://coinremix.com">
+    <meta name="twitter:title" content="CoinRemix">
+    <meta name="twitter:description" content="Spend your time making trades, not spreadsheets. We create in-depth ICO reviews to help investors make sense of blockchain projects and invest smarter.">
+    <meta name="twitter:image" content="https://coinremix.com/img/twitter-meta.png">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://coinremix.com/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="https://coinremix.com/css/style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700" rel="stylesheet">
+
+<style>
+
+.headerLogo {
+  max-height: 50px;
+  max-width: auto;
+}
+
+.tableCenter {
+display: flex !important;
+flex-direction: column;
+justify-content: center !important;
+align-items: center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+    <header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <img class="headerLogo" src="./resources/v13/logo.png" alt="">
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="modal" data-target="#basicModal" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                                            <li class="nav-item">
+                            <a class="nav-link" href="https://www.veva.one/platform">Platform</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.veva.one/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.medium.com/vevaone">Blog</a>
+                        </li>
+
+                                    </ul>
+                <ul class="navbar-nav float-right">
+                                            <li class="nav-item">
+                            <a class="nav-link" href="#">Log in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Navigation -->
+    <nav id="menu" class="navbar navbar-expand-lg" role="navigation">
+        <div class="container">
+
+            <div class="navbar-brand">
+                <img class="headerLogo" src="./resources/v13/logo_dark.png" alt="">
+            </div>
+
+            <button class="navbar-toggler navbar-toggler-right custom-toggler-brand" type="button" data-toggle="modal" data-target="#basicModal" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                                            <li class="nav-item">
+                            <a class="nav-link" href="https://www.veva.one/platform">Platform</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.veva.one/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.medium.com/vevaone">Blog</a>
+                        </li>
+
+                                    </ul>
+                <ul class="navbar-nav float-right">
+                                            <li class="nav-item">
+                            <a class="nav-link" href="#">Log in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+    <!-- Main Content -->
+
+    <main>
+
+        <section id="hero-section">
+            <div class="container hero-content">
+                <div class="row">
+                    <div class="col-sm-11 col-md-12 col-lg-6">
+                        <h1 class="hero-h1">Decentralized Token Ratings for the Modern World</h1>
+                        <p class="hero-subtitle">Investor protection for the token economy, built on the Ethereum blockchain</p>
+                                                <div class="hero-input-wrapper" style="margin-bottom: 56px">
+                            <form action="/register">
+                                <input placeholder="Enter your email address" class="hero-capture-input" type="email"
+                                       name="email">
+                                <button type="submit" class="primary-marketing-button">Join Mailing List!
+                                </button>
+                            </form>
+                            <p class="hero-small">Sign up for the latest ratings, events, and news</p>
+                        </div>
+                                            </div>
+                    <div class="col-sm-1 col-lg-5 offset-lg-1" style="margin-top: -50px;">
+                        <img src="https://coinremix.com/img/home/home-hero.svg" class="hero-image" />
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="feature-card-section">
+            <div class="container">
+                <div class="feature-summary-card card">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <p class="home-h2">Quick Look</p>
+                            <p class="home-content">VEVA ratings are scalable, decentralized, and valuable:</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+
+                          Our platform is 1,000x more scalable than traditional wall street analysts models.
+                          VEVA is designed to be completely permissionless, allowing for near infinite scalability
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+
+                          Our analysts come from all over the world and are randomly assigned to tokens, resulting
+                          in completely distributed, corruption-proof token ratings.
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+
+                          VEVA ratings have inherent value well above what can be produced through traditional
+                          channels. Our ratings are distributed, trusteless, and subject to thorough repeated testing.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-section">
+            <div class="container">
+                <div class="row justify-content-md-center text-center">
+                    <div class="col-sm-12 col-md-8">
+                        <p class="home-h2">The VEVA Ecosystem</p>
+                        <p class="home-subtitle">Key Features</p>
+                        <section>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <h5 class="list-title-with-icon">Detailed Analysts and Ratings</h5>
+                                        <p class="list-content">
+                                          On every token, every month, to converge on truth
+
+                                          Review of team, product, market, token-economics, and resources
+
+                                          Available via a free search engine (and API)
+                                          </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <h5 class="list-title-with-icon">Free and Open to All</h5>
+                                        <p class="list-content">
+
+                                          All historical data, including old briefs and ratings, will be made available on the web and via the VEVA API.
+
+                                           We want fairness for all, not edge for some
+
+
+
+                                        </p>
+                                    </div>
+                                    <!--<div class="col-xs-12 col-sm-6">
+                                        <h5 class="list-title-with-icon faq-list-title">Do you accept bitcoin?</h5>
+                                        <p class="list-content">Yes! Amongst standard forms of payment (Visa, Mastercard, Amex, Diners, Paypal) we also accept Bitcoin for your subscription.</p>
+                                    </div>-->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <h5 class="list-title-with-icon">Adversarial Ratings</h5>
+                                        <p class="list-content">
+                                          Inspired by the prosecutor-and-jury model
+
+                                          extracts the best facts and arguments while minimizing noise and bias                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <h5 class="list-title-with-icon">Decentralized Network of Analysts</h5>
+                                        <p class="list-content">
+                                          Peer-recruited & Peer-reviewed
+
+                                          Experts in wide range of relevant fields
+
+                                          Global/Scalable network to support lots of tokens
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="coin-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-5">
+                        <img src="https://coinremix.com/img/home/ic_coin_reports.svg" class="feature-icon" />
+                        <p class="home-h2">Identify macro shifts in token fundamentals</p>
+                        <p class="home-content">Make better decisions by eliminating the noise. VEVA ratings capture key events that will have a long-term impact on price, while smoothing out the distracting peaks and valleys.</p>
+                        <p class="home-content">Stop FOMOing in the losing money when a token dumps. Let VEVA's decentralized network of experts inform your big-picture trading strategy!</p>
+                        <!--<p class="home-content brand-highlight"><a href="" target="_blank">See our sample Bitcoin report</a></p>-->
+                    </div>
+                    <div class="col-sm-12 col-md-6 offset-md-1">
+                        <img src="https://coinremix.com/img/home/feature-coin.png" class="feature-coin img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ico-section">
+            <div class="ico-stripes"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="https://coinremix.com/img/home/ic_ico_reviews.svg" class="feature-icon" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-5">
+                        <p class="home-h2-dark">Get both sides of the story!</p>
+                        <p class="home-subtitle-dark">
+                        VEVA is making a conscious effort to move away from single-perspective ratings. Our adversarial system ensures that every piece of data used in an analysis is challenged and verified.
+                        Don't bother reading shill posts on some obscure forum. Our archives contain both sides of every argument used on our platorm... rely on our impartial jury decision, or form your own conclusions!
+
+                        </p>
+                        <div class="ico-list-container">
+                            <div class="ico-feature-container" style="padding-left: 84px;">
+                                <img src="https://coinremix.com/img/home/ic_ico_feature_aoa.svg" class="ico-feature-icon" />
+                                <h5 class="feature-list-title-dark icon-aoa">Our Protocol</h5>
+                                <p class="list-content-dark">
+                                  The VEVA platform represents a quantum leap in token ratings. We are completely decentralized and rely on game theortical mechanics to ensure high-quality token ratings</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-5 offset-md-2">
+                        <!--CARD GOES HERE-->
+                        <div class="callout-ico-card card">
+                            <img src="https://coinremix.com/img/home/dragonchain.png" class="ico-card-icon" />
+                            <p class="card-title-neutral" style="line-height: 31px;">DragonChain</p>
+                            <p class="card-content">Dragonchain provides a commercial platform for businesses to implement a private blockchain using existing serverless technologies.</p>
+<hr>
+                            <img src="./resources/v13/rating.png" class="img-fluid"/>
+
+                            <p class="card-content" style="text-align:center"> Last Review: 3 weeks ago  |  Total Reviews: 17 </p>
+                            <hr>
+
+
+                            <!--<hr>
+                            <p class="card-content">Want to get a free copy of our ICO review for Dragonchain? Enter your email below and we’ll send it to your inbox.</p>-->
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="ico-list-container">
+                            <div class="ico-feature-container" style="padding-left: 84px;">
+                                <img src="https://coinremix.com/img/home/ic_ico_feature_nutsnbolts.svg" class="ico-feature-icon" />
+                                <h5 class="feature-list-title-dark icon-aoa">Conflict Proof</h5>
+                                <p class="list-content-dark">
+                                  VEVA analysts are quasi-randomly assigned to tokens, and are equally as likely to be a bull as a bear. This, plus the economic incentive to win regardless of assignment, creates an environment in which the best data rises to the top.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="ico-list-container">
+                            <div class="ico-feature-container" style="padding-left: 84px;">
+                                <img src="https://coinremix.com/img/home/ic_ico_feature_comp.svg" class="ico-feature-icon" />
+                                <h5 class="feature-list-title-dark icon-aoa">Quality Analysts</h5>
+                                <p class="list-content-dark">
+
+                                  We started with a trusted group of hand-picked experts and run a semi-closed system: nobody can serve as an analyst until they've been vetted by an existing analyst to prevent sybil attack and maintain quality.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="ico-list-container">
+                            <div class="ico-feature-container" style="padding-left: 84px;">
+                                <img src="https://coinremix.com/img/home/ic_ico_feature_team.svg" class="ico-feature-icon" />
+                                <h5 class="feature-list-title-dark icon-aoa">Qualitative and Quantitative</h5>
+                                <p class="list-content-dark">
+                                  Our system is designed to capture both strong quantative data and the kind of qualitative data that can only be extracted by humans.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="ico-list-container">
+                            <div class="ico-feature-container" style="padding-left: 84px;">
+                                <img src="https://coinremix.com/img/home/ic_ico_feature_ico.svg" class="ico-feature-icon" />
+                                <h5 class="feature-list-title-dark icon-aoa">Economic Inventives</h5>
+                                <p class="list-content-dark">
+                                  Every aspect of the system has an economic incentive or disincentive, creating a robust, predictable ecosystem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+<!--        <section id="callout-card-section">
+            <div class="container">
+                <div class="callout-article-card card">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <p class="card-title-primary">Learn how we analyze and review ICOs</p>
+                            <p class="card-content">We use a structured framework to approach our analysis when reviewing a new ICO. We gather intel from across the website leverage a diverse range of sources.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <img src="https://coinremix.com/img/home/card-placeholder-img.png" class="img-fluid card-rhs-image" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+
+
+        <section id="analyst-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-5">
+                        <img src="https://coinremix.com/img/home/ic_analyst_reviews.svg" class="feature-icon" />
+                        <p class="home-h2">VEVA is your gateway to crypto</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-5" >
+                        <p class="home-content">Novice or experienced, everyone needs a little guidance. VEVA is here to provide distributed token ratings. We are:</p>
+                        <div class="feature-list-container">
+                            <h5 class="list-title list-title-with-icon feature-list-title">Trustless</h5>
+                            <p class="list-content">
+                              VEVA is designed to be trustless. We assume analysts are either incompetent, lazy, conflicted, or corrupted and work backwards. The adversarial mechanics eliminates bad actors/actions to provide the highest quality token analysis platform ever.
+                              </p>
+                            <h5 class="list-title list-title-with-icon feature-list-title">Necessary</h5>
+                            <p class="list-content">
+Without any mechanism for parsing signal from noise, how do we trust prices? The promise of crypto is at risk of being hijacked by scams, pump+dump schemes, incompetent teams or manic speculation. Price discovery is a critical imperative and we hope to support this obective by provding an open database of fundamental signals to support valuation models.                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12 col-md-1" style="border-right: 1px solid #F6F9FC;"></div>
+                    <div class="col-sm-12 col-md-5 offset-md-1" >
+                        <div style="padding-bottom: 24px;">
+                            <h5 class="list-title">Investor Protection</h5>
+                            <p class="home-content">VEVA ratings have been integrated into top exchanges, including:</p>
+                        </div>
+                        <ul>
+                            <li class="list-title">Bittrex</li>
+                            <li class="list-title">Kraken</li>
+                            <li class="list-title">BitMex</li>
+                            <li class="list-title">Bitflyer</li>
+                            <li class="list-title">Binance</li>
+                            <li class="list-title">Bithumb</li>
+                            <li class="list-title">OKex</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing-section">
+            <div class="container tableCenter">
+                <div class="row justify-content-md-center text-center">
+                    <div class="col-sm-12 col-md-8">
+                        <p class="home-h2">Our Ratings</p>
+                        <p class="home-subtitle">Click Here to see the full ratings and access our information database!</p>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <!--card here -->
+                    <div class="callout-pricing-card card">
+                        <div class="row tableCenter">
+                          <div>
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Rating</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Ticker</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Market Cap</th>
+                                <th scope="col">Last 5 Ratings</th>
+                                <th scope="col">Last Review</th>
+                                <th scope="col">Consensus</th>
+                                <th scope="col">More</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Bitcoin</td>
+                                <td>BTC</td>
+                                <td>$9,126</td>
+                                <td>160,000,000,000</td>
+                                <td>8.1</td>
+                                <td>2 weeks ago</td>
+                                <td>Bear</td>
+                                <td>more</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Ethereum</td>
+                                <td>ETH</td>
+                                <td>$779</td>
+                                <td>17,000,000,000</td>
+                                <td>9.2</td>
+                                <td>4 days ago</td>
+                                <td>Strong Bull</td>
+                                <td>more</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Ripple</td>
+                                <td>XRP</td>
+                                <td>$0.86</td>
+                                <td>15,000,000,000</td>
+                                <td>5.5</td>
+                                <td>5 days ago</td>
+                                <td>Strong Bear</td>
+                                <td>more</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td>Neo</td>
+                                <td>NEO</td>
+                                <td>$77</td>
+                                <td>9,000,000,000</td>
+                                <td>9.2</td>
+                                <td>2 weeks ago</td>
+                                <td>Bull</td>
+                                <td>more</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">5</th>
+                                <td>Litecoin</td>
+                                <td>LTC</td>
+                                <td>$188</td>
+                                <td>11,000,000,000</td>
+                                <td>4.0</td>
+                                <td>1 day ago</td>
+                                <td>Bull</td>
+                                <td>more</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">6</th>
+                                <td>Monero</td>
+                                <td>XMR</td>
+                                <td>$299</td>
+                                <td>2,000,000,000</td>
+                                <td>7.9</td>
+                                <td>1 month ago</td>
+                                <td>Strong Bull</td>
+                                <td>more</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="faq-section">
+            <div class="faq-stripes"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <h5 class="list-title-with-icon faq-list-title">Is VEVA a free service?</h5>
+                        <p class="list-content">Of course! We release all of our data to the public, including old briefs. We want fairness for all, not edge for some!</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <h5 class="list-title-with-icon faq-list-title">Why adversarial ratings?</h5>
+                        <p class="list-content">
+Decentralized computing is really trustless computing.  Bitcoin/Ethereum assume nodes are unreliable or corrupt; the proof-of-work protocol ensures good behavior and a robust, trusted network.                        </p>
+                    </div>
+                    <!--<div class="col-xs-12 col-sm-6">
+                        <h5 class="list-title-with-icon faq-list-title">Do you accept bitcoin?</h5>
+                        <p class="list-content">Yes! Amongst standard forms of payment (Visa, Mastercard, Amex, Diners, Paypal) we also accept Bitcoin for your subscription.</p>
+                    </div>-->
+                    <div class="col-xs-12 col-sm-6">
+                        <h5 class="list-title-with-icon faq-list-title">How can I get involved?</h5>
+                        <p class="list-content">Contact us! We are always looking for new analysts——although we do have a fairly long waitlist.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <h5 class="list-title-with-icon faq-list-title">Do you have a FAQ?</h5>
+                        <p class="list-content">Definitely! Click here to read our FAQ, and if you have any other questions, feel free to contact us!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="links-section" style="padding-bottom: 48px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <a href="https://www.facebook.com/coinremix/" target="_blank" class="card-a-wrapper">
+                            <div class="home-info-card card">
+                                <img src="https://coinremix.com/img/home/card_fb.svg" class="coin-promo-card-image">
+                                <p class="card-title-primary">JOIN THE CONVERSATION</p>
+                                <p class="card-content">Join our Facebook user community to ask questions, give feedback and stay up to date on product announcements </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <a href="https://medium.com/coinremix" target="_blank" class="card-a-wrapper">
+                            <div class="home-info-card card">
+                                <img src="https://coinremix.com/img/home/card_notes.svg" class="coin-promo-card-image">
+                                <p class="card-title-primary">CATCH US ON MEDIUM</p>
+                                <p class="card-content">Our team members often write about crypto, blockchain and coinremix, follow us on Medium to stay up to date on crypto industry news.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <section id="footer-signup-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <p class="footer-title-brand">Ready to get started?</p>
+                        <p class="footer-title-secondary">Apply to become an analyst!</p>
+                    </div>
+                    <div class="col-sm-12 col-md-3 offset-md-2 text-right">
+                        <a href="/register" class="primary-marketing-button brand-bg link-button">Create account</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+            </main>
+
+    <!-- End Content -->
+    <footer style="border-top: 1px solid rgba(0,0,0,.1)">
+    <div class="container">
+        <div class="row" style="padding-bottom: 48px;">
+            <div class="col-sm-12 col-md-5">
+                <p class="home-h2" id="footer-spiel">Decentralized Token Ratings. <br>Built for the token economy.</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 offset-md-1">
+                <p class="list-title">Products</p>
+                <ul class="footer-link-list">
+                    <li class="footer-link-list-item"><a href="https://www.veva.one/platform">Protocol</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <p class="list-title">Our company</p>
+                <ul class="footer-link-list">
+                    <!--<li class="footer-link-list-item"><a href="/about">About</a></li>-->
+                    <li class="footer-link-list-item"><a href="https://www.veva.one/about">About</a></li>
+                    <li class="footer-link-list-item"><a href="https://docs.google.com/document/d/1Fzi9DRUeKCgL9WCl1teopOc2TXZ461QAkJqWNFKNPTA/edit">FAQ</a></li>
+
+
+                </ul>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <p class="list-title">Reach out</p>
+                <ul class="footer-link-list">
+                    <li class="footer-link-list-item"><a href="#">Contact</a></li>
+                    <li class="footer-link-list-item"><a class="facebook-highlight" href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                    <li class="footer-link-list-item medium-highlight"><a class="medium-highlight" href="https://medium.com/vevaone" target="_blank">Medium</a></li>
+                    <li class="footer-link-list-item twitter-highlight"><a class="twitter-highlight" href="https://twitter.com/vevaone" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="footer-legal">&copy; 2018 veva.one</p>
+                <p class="footer-legal"><a href="#" target="_blank">Terms</a></p>
+                <p class="footer-legal"><a href="#" target="_blank">Privacy</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="basicModal" style="z-index: 9999;    box-shadow: 0 50px 100px rgba(50, 50, 93, .1), 0 15px 35px rgba(50, 50, 93, .15), 0 5px 15px rgba(0, 0, 0, .1);">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content" style="border:none">
+            <div class="modal-header">
+                <h5 class="home-modal-title">Menu</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><img src="https://coinremix.com/img/ic_close.svg"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="nav-modal-list">
+                    <li class="nav-modal-li"><a href="/pricing">Pricing</a></li>
+                    <li class="nav-modal-li"><a href="/faq">FAQ</a></li>
+                    <li class="nav-modal-li"><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="modal-body" style="border-top: 2px solid #f6f9fc;">
+                <ul class="nav-modal-list">
+                    <li class="nav-modal-li"><a href="/login">Log in</a></li>
+                    <li class="nav-modal-li"><a href="/register">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- JavaScript -->
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="https://embed.small.chat/T8M3AM2B0G8M9571F0.js" async></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Nav Handler -->
+    <script type="text/javascript">
+        (function($) {
+            $(document).ready(function(){
+
+                $(window).scroll(function(){
+                    if ($(this).scrollTop() > 200) {
+                        $('#menu').slideDown(400);
+                    } else {
+                        $('#menu').slideUp(400);
+                    }
+                });
+
+            });
+        } ) ( jQuery );
+    </script>
+
+
+</body>
+</html>
