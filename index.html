@@ -41,7 +41,7 @@
         }
 
         .blockFlex {
-          height:500px;
+          height:100%;
           display: flex;
           flex-direction: column;
           justify-content: space-around;
@@ -106,6 +106,17 @@
           width:100%;
           display:flex;
           justify-content: center;
+        }
+
+        .protocolPad {
+          padding-bottom:30px;
+        }
+
+        .protocolIcon {
+          font-size: 100px;
+          padding:15px;
+          color: #0000cc;
+
         }
 
         </style>
@@ -479,10 +490,10 @@
         About start
         ==================== -->
 
-<hr>
-        <section id="about" class="section">
+        <section id="about" class="section sectionSmall">
             <div class="container">
                 <div class="row columnFlex">
+
                   <div class="sub-heading">
                     <h2>Our protocol takes inspiration from the prosecutor-and-jury model and game theory</h2>
                   </div>
@@ -490,19 +501,27 @@
                     <div class="col-md-7 col-sm-12 wow fadeInLeft">
                         <div class="block blockFlex">
                             <div class="about-slider blockFlex">
-                              <div class="horizontalFlex">
+
+
+                              <div class="horizontalFlex protocolPad">
                                 <h4>
                                   VEVA is a peer-to-peer network of trustless experts. We assume analysts are either incompetent, lazy, conflicted, or corrupted and work backwards. The game theoretical mechanics eliminates bad actors/actions to provide the highest quality token analysis platform——ever.
                                 </h4>
                                 <div class="about-item">
-                                  <img src="./resources/v13/lock.png" alt="" class="img-responsive img-limit">
+                                  <i class="ion-ios-world protocolIcon"></i>
                                 </div>
                               </div>
 
-                            <div class="horizontalFlex">
+
+                            <div class="horizontalFlex protocolPad">
 
                               <div class="about-item">
+
+                                <i class="ion-ios-paper protocolIcon"></i>
+
+                                <!--
                                 <img src="./resources/v13/coins.png" alt="" class="img-responsive img-limit">
+                                -->
                               </div>
 
                               <h4 class="headerPad">
@@ -512,16 +531,32 @@
                             </div>
 
 
-                            <div class="horizontalFlex">
+                            <div class="horizontalFlex protocolPad">
                               <h4>
                                 Our analysts earn 'Reputation Points' to reach new levels. Higher levels come with additional referrals, used for adding new members to the ecosystem——and the ability to earn a percentage of their income! This ensures a network of only trusted analysts.
                               </h4>
 
                               <div class="about-item">
-                                <img src="./resources/v13/rank.png" alt="" class="img-responsive img-limit pad-right">
+                              <i class="ion-ios-people protocolIcon"></i>
                               </div>
 
                             </div>
+
+                            <div class="horizontalFlex protocolPad">
+
+                              <div class="about-item">
+
+                                <i class="ion-cash protocolIcon"></i>
+
+                              </div>
+
+                              <h4 class="headerPad">
+                                Winning analysts and jurors will receive VEVA tokens as payout. This economic reward incentivizes both analysts to present the strongest argument available, and the jurors to make accurate assessments.
+                              </h4>
+
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
