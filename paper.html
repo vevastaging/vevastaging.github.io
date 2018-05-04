@@ -91,12 +91,14 @@
           display:flex;
           justify-content: center;
           align-items: center;
+
+          /*
           border-style: solid;
           padding-left: 10px;
           padding-right: 10px;
           margin-left: 10px;
           margin-right: 10px;
-
+          */
         }
 
         .outsideFlex {
@@ -144,6 +146,7 @@
 
         .protocolPad {
           padding:15px;
+          margin:15px;
         }
 
         .protocolIcon {
@@ -158,16 +161,23 @@
         }
 
         .blockOutline {
-          border-style: solid;
+
           display: flex;
           flex-direction: column;
           align-items: center;
-                    padding: 20px;
+          padding: 20px;
+          max-width: 100%;
         }
 
         .blockTwo {
           padding: 20px;
           display:flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .headBlack {
+          color:#7e7e7e;
         }
 
         </style>
@@ -279,95 +289,185 @@
                 <div class="row columnFlex">
 
                   <div class="sub-heading">
-                    <h2>Our Working Paper</h2>
+                    <h1 class="headBlack">Our Working Paper</h1>
                     <h5>Latest Version: 5/3/2018</h5>
                   </div>
 
+
+<!-- - - - - - - - - - - - - - - - - - - - - - -
+
+
+<div class="block blockFlex">
+    <div class="about-slider blockFlex">
+
+      <div class="blockOutline">
+
+        <div class="outsideFlex">
+      <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+        <a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.p"> Full Paper </a>
+        <div class="about-item">
+          <i class="ion-document protocolIcon"></i>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="blockTwo">
+      <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+<a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g28898a2f7e_0_6"> Pain Points </a>
+        <div class="about-item">
+          <i class="ion-pin protocolIcon"></i>
+        </div>
+      </div>
+
+      <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+<a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g28898a2f7e_0_0"> VEVA Protocol </a>
+        <div class="about-item">
+          <i class="ion-gear-a protocolIcon"></i>
+        </div>
+      </div>
+
+      <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+<a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g276421a5d9_0_6"> Valuation Survey </a>
+        <div class="about-item">
+          <i class="ion-clipboard protocolIcon"></i>
+        </div>
+      </div>
+
+      <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+<a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g25e3b1e587_0_19"> Need for Tokens </a>
+        <div class="about-item">
+          <i class="ion-link protocolIcon"></i>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="blockTwo">
+      <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+<a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g276421a5d9_0_12"> Analyst Recruiting </a>
+        <div class="about-item">
+          <i class="ion-funnel protocolIcon"></i>
+        </div>
+      </div>
+
+      <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+<a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g276421a5d9_0_56"> Token Economics </a>
+        <div class="about-item">
+          <i class="ion-arrow-graph-up-right protocolIcon"></i>
+        </div>
+      </div>
+
+      <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+<a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g2a6b7a2431_0_0"> Technical Architecture </a>
+        <div class="about-item">
+          <i class="ion-settings protocolIcon"></i>
+        </div>
+      </div>
+
+      <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+<a href="#"> Decentralization Roadmap<br><i>(coming soon)</i> </a>
+        <div class="about-item">
+          <i class="ion-map protocolIcon"></i>
+        </div>
+      </div>
+    </div>
+
+      <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+<a href="https://docs.google.com/presentation/d/1JoHfLIh2hByyPxDLbRVVGtc_w3VnRZ3wQWYrsklnqfs/edit?usp=sharing"> TL;DR... Too busy? Here is a very brief 3-page VEVA overview!</a>
+        <div class="about-item">
+          <i class="ion-crop protocolIcon"></i>
+        </div>
+      </div>
+    </div>
+
+            ------------------------>
+
                     <!--<div class="col-md-7 col-sm-12 wow fadeInLeft">-->
-                    <div class="col-md-7 col-sm-12">
+                    <section id="paper">
                         <div class="block blockFlex">
                             <div class="about-slider blockFlex">
 
-                              <div class="blockOutline">
 
-                                <div class="outsideFlex">
                               <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
                                 <a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.p"> Full Paper </a>
                                 <div class="about-item">
                                   <i class="ion-document protocolIcon"></i>
                                 </div>
                               </div>
+
+
+                              <h3> TL;DR... Too busy? </h3>
+                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+<a href="https://docs.google.com/presentation/d/1JoHfLIh2hByyPxDLbRVVGtc_w3VnRZ3wQWYrsklnqfs/edit?usp=sharing"> Here is a very brief 3-page VEVA overview!</a>
+                                <div class="about-item">
+                                  <i class="ion-crop protocolIcon"></i>
+                                </div>
+                              </div>
                             </div>
 
 
-                              <div class="blockTwo">
-                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+                            <h3> Table of Contents </h3>
+
+                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.1s">
 <a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g28898a2f7e_0_6"> Pain Points </a>
                                 <div class="about-item">
                                   <i class="ion-pin protocolIcon"></i>
                                 </div>
                               </div>
 
-                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.1s">
 <a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g28898a2f7e_0_0"> VEVA Protocol </a>
                                 <div class="about-item">
                                   <i class="ion-gear-a protocolIcon"></i>
                                 </div>
                               </div>
 
-                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.1s">
 <a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g276421a5d9_0_6"> Valuation Survey </a>
                                 <div class="about-item">
                                   <i class="ion-clipboard protocolIcon"></i>
                                 </div>
                               </div>
 
-                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.1s">
 <a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g25e3b1e587_0_19"> Need for Tokens </a>
                                 <div class="about-item">
                                   <i class="ion-link protocolIcon"></i>
                                 </div>
                               </div>
-                            </div>
 
 
-                            <div class="blockTwo">
-                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+
+
+                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.1s">
 <a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g276421a5d9_0_12"> Analyst Recruiting </a>
                                 <div class="about-item">
                                   <i class="ion-funnel protocolIcon"></i>
                                 </div>
                               </div>
 
-                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.1s">
 <a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g276421a5d9_0_56"> Token Economics </a>
                                 <div class="about-item">
                                   <i class="ion-arrow-graph-up-right protocolIcon"></i>
                                 </div>
                               </div>
 
-                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
+                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.1s">
 <a href="https://docs.google.com/presentation/d/1Unl6xg_aYyDtI92D8jNiidKNyzGy95lpjVc5fxxiXYs/edit#slide=id.g2a6b7a2431_0_0"> Technical Architecture </a>
                                 <div class="about-item">
                                   <i class="ion-settings protocolIcon"></i>
                                 </div>
                               </div>
 
-                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
-<a href="#"> Decentralization Roadmap <i>(coming soon)</i> </a>
+                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.1s">
+<a href="#about"> Decentralization Roadmap<br><i>(coming soon)</i> </a>
                                 <div class="about-item">
                                   <i class="ion-map protocolIcon"></i>
                                 </div>
                               </div>
-                            </div>
 
-                              <div class="horizontalFlex protocolPad wow fadeInRight" data-wow-delay="0.3s">
-<a href="https://docs.google.com/presentation/d/1JoHfLIh2hByyPxDLbRVVGtc_w3VnRZ3wQWYrsklnqfs/edit?usp=sharing"> TL;DR... Too busy? Here is a very brief 3-page VEVA overview!</a>
-                                <div class="about-item">
-                                  <i class="ion-crop protocolIcon"></i>
-                                </div>
-                              </div>
-                            </div>
 
 
 
@@ -389,10 +489,8 @@
 -->
 
 
-                        </div>
-                    </div>
-                </div>
             </div>
+
         </section>
 
         <!-- #about close -->
