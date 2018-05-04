@@ -342,7 +342,9 @@ a:active {
 
 #hero-area {
   padding:50px 0;
-    background: rgba(0, 0, 0, 0) linear-gradient(135deg, #0000cc 0%, #8080ff 100%) repeat scroll 0 0;
+    /*background: rgba(0, 0, 0, 0) linear-gradient(135deg, #0000cc 0%, #8080ff 100%) repeat scroll 0 0;*/
+    background: rgba(0, 0, 0, 0) linear-gradient(135deg, #001095 0%, #0083FF 100%) repeat scroll 0 0;
+
 }
 #hero-area:before {
     content: "";
@@ -444,7 +446,7 @@ a:active {
     color: #fff;
 }
 .navbar-default.animated .navbar-nav > li.current > a {
-    color: #8080ff;
+    color: #0083FF;
 }
 #hero-area .navbar-default .navbar-nav {
     padding-top: 11px;
@@ -601,11 +603,11 @@ a:active {
         -ms-transform: rotate(50deg);
          -o-transform: rotate(50deg);
             transform: rotate(50deg);
-background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#0000cc), color-stop(100%,#8080ff));
-  background: -webkit-linear-gradient(-45deg, #0000cc 0%,#8080ff 100%);
-  background: -o-linear-gradient(-45deg, #0000cc 0%,#8080ff 100%);
-  background: -ms-linear-gradient(-45deg, #0000cc 0%,#8080ff 100%);
-  background: linear-gradient(135deg, #0000cc 0%,#8080ff 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#0000cc), color-stop(100%,#0083FF));
+  background: -webkit-linear-gradient(-45deg, #0000cc 0%,#0083FF 100%);
+  background: -o-linear-gradient(-45deg, #0000cc 0%,#0083FF 100%);
+  background: -ms-linear-gradient(-45deg, #0000cc 0%,#0083FF 100%);
+  background: linear-gradient(135deg, #0000cc 0%,#0083FF 100%);
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -742,7 +744,7 @@ background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#0000
 
 #call-to-action {
     padding: 70px 0px;
-    background: rgba(0, 0, 0, 0) linear-gradient(135deg, #0000cc 0%, #8080ff 100%) repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) linear-gradient(135deg, #0000cc 0%, #0083FF 100%) repeat scroll 0 0;
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -814,7 +816,7 @@ hr {
 }
 .btn-send {
     line-height: 48px;
-    border: 2px solid #8080ff;
+    border: 2px solid #0083FF;
     background: #0000cc;
     color: #fff;
     width: 100%;
@@ -852,7 +854,7 @@ hr {
     color: #fff;
     padding:10px 20px;
     font-size: 15px;
-    background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#8080ff), color-stop(100%,#0000cc));
+    background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#0083FF), color-stop(100%,#0000cc));
 }
 
 
