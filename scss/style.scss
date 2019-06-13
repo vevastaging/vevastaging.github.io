@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5,
 		top: 0;
 		position: relative;
 	}
-	
+
 	.navbar-nav {
 		> .nav-item {
 			> .nav-link {
@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5,
 				}
 			}
 
-			
+
 			&.ftco-seperator {
 				position: relative;
 				margin-left: 20px;
@@ -123,7 +123,7 @@ h1, h2, h3, h4, h5,
 		font-size: 16px;
 		letter-spacing: .1em;
 	}
-	
+
 	&.scrolled  {
 		position: fixed;
 		right: 0;
@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5,
 			transition: .3s all ease-out;
 		}
 		&.sleep {
-			transition: .3s all ease-out;	
+			transition: .3s all ease-out;
 		}
 
 		.navbar-brand {
@@ -204,10 +204,10 @@ h1, h2, h3, h4, h5,
 .ftco-cover {
   // background: lighten( $black, 10%);
   @extend .bg-image;
-  
+
 
   background-position: center center;
- 	
+
 	.ftco-heading {
 		font-size: 50px;
 		line-height: 1.2;
@@ -221,6 +221,7 @@ h1, h2, h3, h4, h5,
 		max-width: 450px;
 		line-height: 1.5;
 	}
+
 	.ftco-subheading, p {
 		line-height: 1.7;
 		color: rgba(255,255,255,.7);
@@ -242,7 +243,7 @@ h1, h2, h3, h4, h5,
 			content: "";
 			background: rgba($black,.6);
 			position: absolute;
-			top: 0; 
+			top: 0;
 			left: 0;
 			bottom: 0;
 			right: 0;
@@ -264,17 +265,17 @@ h1, h2, h3, h4, h5,
 		transform: rotate(-5deg);
 		content: "";
 		position: absolute;
-		bottom: -100px;	
+		bottom: -100px;
 		@include media-breakpoint-down(lg) {
 			bottom: -150px;
 		}
 		@include media-breakpoint-down(md) {
 			bottom: -170px;
 		}
-	}	
+	}
 	&.ftco-slant-white {
 		&:after {
-			background: $white;	
+			background: $white;
 		}
 	}
 	&.ftco-slant-dark {
@@ -433,7 +434,7 @@ textarea.form-control {
 				border: 2px solid $black;
 			}
 		}
-		
+
 	}
 }
 
@@ -462,7 +463,7 @@ textarea.form-control {
 #section-about {
 	padding: 8em 0;
 	.img {
-		position: absolute; 
+		position: absolute;
 		right: 0;
 		@include media-breakpoint-down(md) {
 			position: relative;
@@ -669,7 +670,7 @@ textarea.form-control {
 		opacity: 0;
 		visibility: hidden;
 		transition: .3s all ease;
-		.owl-prev, 
+		.owl-prev,
 		.owl-next {
 			position: absolute;
 			font-size: 30px;
@@ -766,7 +767,7 @@ textarea.form-control {
 			// background: $white;
 			padding: 15px;
 			@include media-breakpoint-up(md) {
-				padding: 10% 7%;	
+				padding: 10% 7%;
 			}
 			h3 {
 				margin-bottom: 50px;
@@ -788,7 +789,7 @@ textarea.form-control {
 		// padding: 10% 40px;
 		padding: 30px 15px;
 		@include media-breakpoint-up(md) {
-			padding: 40px;	
+			padding: 40px;
 		}
 		h3 {
 			margin-bottom: 30px;
@@ -811,13 +812,13 @@ textarea.form-control {
 		}
 	}
 	.image {
-		
+
 		height: 500px;
 		margin-top: 0;
 		margin-left: 0;
 		@include media-breakpoint-up(md) {
 			margin-top: -70px;
-			margin-left: -70px;	
+			margin-left: -70px;
 		}
 	}
 }
@@ -833,8 +834,8 @@ textarea.form-control {
 
 	-ms-transform: perspective(1000px);
 	-moz-transform: perspective(1000px);
-	-moz-transform-style: preserve-3d; 
-	-ms-transform-style: preserve-3d; 
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
 
 
 	&:hover .back, &.hover .back {
@@ -850,7 +851,7 @@ textarea.form-control {
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
 	}
-	
+
 
 	&, .front, .back {
 		width: 100%;
@@ -960,7 +961,7 @@ textarea.form-control {
 	    transform: rotateY(-180deg);
 	}
 
-	
+
 	.back p {
 		position: absolute;
 		top: 40px;
@@ -1007,7 +1008,7 @@ textarea.form-control {
 	}
 
 }
-		
+
 // magnific pop up
 
 .image-popup {
@@ -1019,9 +1020,9 @@ textarea.form-control {
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
   -webkit-backface-visibility: hidden;
-  -webkit-transition: all 0.3s ease-out; 
-  -moz-transition: all 0.3s ease-out; 
-  -o-transition: all 0.3s ease-out; 
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -1032,7 +1033,7 @@ textarea.form-control {
     opacity: 0.8;
 }
 
-.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
 }
@@ -1052,7 +1053,7 @@ textarea.form-control {
 	}
 }
 
-// blocks 
+// blocks
 .block-5 {
 	overflow: hidden;
 	background-size: cover;
@@ -1087,7 +1088,7 @@ textarea.form-control {
 			left: 0;
 			right: 0;
 			z-index: 1;
-			background: $white;	
+			background: $white;
 			visibility: hidden;
 			opacity: 0;
 			height: 0;
@@ -1144,7 +1145,7 @@ textarea.form-control {
 			.heading, .subheading, .post-meta {
 				color: $black;
 			}
-			
+
 		}
 	}
 }
@@ -1180,9 +1181,9 @@ textarea.form-control {
 			font-size: 16px;
 		}
 	}
-} 
+}
 
-//### .block-10 
+//### .block-10
 .block-10 {
 	margin-bottom: 30px;
 	.person-info {
@@ -1229,7 +1230,7 @@ textarea.form-control {
 		display: block;
 		sup {
 			font-size: 20px;
-			top: -2em; 
+			top: -2em;
 		}
 		.number {
 			font-size: 80px;
@@ -1295,14 +1296,14 @@ textarea.form-control {
 				&[aria-expanded="false"] {
 					&:before {
 						content: "\e313";
-						color: #ccc;	
+						color: #ccc;
 						font-family: 'icomoon';
 						position: absolute;
-				
+
 						transition: .3s all ease;
 					}
 				}
-				
+
 			}
 		}
 		.body-text {
@@ -1320,7 +1321,7 @@ textarea.form-control {
 			padding-bottom: 2em;
 		}
 		.owl-item {
-			box-shadow: 0 7px 20px -5px rgba(0,0,0,.2);	
+			box-shadow: 0 7px 20px -5px rgba(0,0,0,.2);
 		}
 		.owl-nav {
 			z-index: 2;
@@ -1364,7 +1365,7 @@ textarea.form-control {
 				margin-bottom: 10px;
 				transition: .3s all ease;
 				&.active {
-					
+
 					background: $primary;
 				}
 			}
@@ -1402,7 +1403,7 @@ textarea.form-control {
 		padding: 10% 7%;
 		@include media-breakpoint-up(md) {
 			width: 50%;
-			padding: 10% 7%;	
+			padding: 10% 7%;
 		}
 	}
 	.text {
@@ -1471,7 +1472,7 @@ textarea.form-control {
 				&:hover, &:focus {
 					color: $white;
 				}
-			}	
+			}
 		}
 	}
 	.prev {
@@ -1599,9 +1600,9 @@ textarea.form-control {
 	padding: 25px;
 	font-size: 15px;
 	width: 100%;
-	
+
 	float: left;
-	
+
 	background: $white;
 	*:last-child {
 		margin-bottom: 0;
@@ -1654,7 +1655,7 @@ textarea.form-control {
 	background-color: rgba(255,255,255,0.9);
 	box-shadow: 0px 24px 64px rgba(0,0,0,0.24);
 	border-radius:16px;
-	opacity: 0; 
+	opacity: 0;
 	visibility: hidden;
 	transition: opacity .2s ease-out, visibility 0s linear .2s;
 	z-index:1000;
